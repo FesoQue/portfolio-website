@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './component/Header';
 import Home from './pages/Home';
 import About from './pages/About';
 import Skills from './pages/Skills';
@@ -9,12 +8,11 @@ import Contact from './pages/Contact';
 const App = () => {
   return (
     <main>
-      <Header />
       <Home />
-      <About />
+      {/* <About />
       <Skills />
       <Projects />
-      <Contact />
+      <Contact /> */}
     </main>
   );
 };
