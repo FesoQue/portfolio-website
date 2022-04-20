@@ -118,6 +118,7 @@ a {
 main {
   overflow-x: hidden;
 }
+/* header */
 header {
   height: 20vh;
 }
@@ -148,10 +149,10 @@ header {
 .menu-item {
   position: relative;
   width: calc(95vw / 5);
+  font-size: 23px;
   display: flex;
   justify-content: center;
   display: flex;
-  font-size: 22px;
 }
 .label {
   position: absolute;
@@ -163,22 +164,36 @@ header {
   bottom: -53px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--text-color);
-  background-color: var(--green-dark);
+  color: #fff;
+  background-color: var(--green);
   border-radius: 3px;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+.active svg {
+  color: var(--gray3);
+}
+.active .label {
+  transform: scale(1);
 }
 .two {
-  background-color: var(--orange-dark);
+  background-color: #0f5bff;
+}
+.three {
+  background-color: #ff495f;
+}
+.four {
+  background-color: #7745ff;
+}
+.five {
+  background-color: #e13eff;
 }
 
 /* ===================
-        CONTENT
+       HOMEPAGE
    ===================  */
 .homepage {
-  height: 100vh;
-}
-.intro {
-  height: calc(100vh - 20vh);
+  height: calc(95vh - 20vh);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,20 +213,26 @@ h1.char {
   align-items: center;
   padding: 0;
   margin-left: 0.7rem;
-  outline: 1px solid red;
   margin-bottom: 0;
   overflow: hidden;
-  /* visibility: hidden; */
   line-height: 0.7;
 }
 .char div {
   position: relative;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--green-light);
+}
+.char div:nth-child(4)::before,
+.char div:nth-child(5)::before {
+  margin-left: -1px;
 }
 .char div::before {
   content: attr(data-char);
   position: absolute;
   top: 0;
   left: 0;
+  color: var(--green-light);
+  -webkit-text-stroke: 2px transparent;
   transform: translateY(-173%);
 }
 .job-desc {
@@ -247,9 +268,9 @@ h1.char {
   }
 }
 .social-wrapper p {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-color);
 }
 .socials {
   margin-top: 0.6rem;
@@ -260,5 +281,12 @@ h1.char {
   transition: color 0.3s ease-in-out;
 }
 .socials svg:hover {
-  color: var(--cyan);
+  color: var(--green);
+}
+
+/* ===================
+        CONTACT
+   ===================  */
+.contact {
+  margin-top: 60px;
 }

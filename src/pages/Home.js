@@ -14,11 +14,11 @@ const Home = () => {
   const textsRef = useRef();
 
   // gsap
-  // const charEl = useRef();
-  // const q = gsap.utils.selector(charEl);
-  // const tl = gsap.timeline();
-  // gsap.set(q('div'), { yPercent: -155 });
-  // gsap.set(charEl.current, { autoAlpha: 1 });
+  const tl = useRef();
+  const charEl = useRef();
+  const q = gsap.utils.selector(charEl);
+  gsap.set(q('div'), { yPercent: -170 });
+  gsap.set(charEl.current, { autoAlpha: 1 });
 
   useEffect(() => {
     // slide up multitext effect
@@ -36,26 +36,42 @@ const Home = () => {
       } else {
         index++;
       }
-      setTimeout(animateText, 2500);
+      setTimeout(animateText, 3000);
     };
 
     animateText();
   }, []);
 
+  useEffect(() => {
+    tl.current = gsap
+      .timeline()
+      .to(q('div'), {
+        duration: 0.3,
+        yPercent: 0,
+        stagger: 0.05,
+        ease: 'expo.inOut',
+      })
+      .to(q("div:not([data-char='.']"), {
+        duration: 1,
+        yPercent: 170,
+        stagger: 0.11,
+        ease: 'expo.inOut',
+      });
+  }, []);
+
   return (
     <section className='homepage'>
-      <Header />
       <div className='intro container'>
         <div className='intro-text'>
           <h1>Hi,</h1>
           <div className='d-flex'>
             <h1>I'm</h1>
-            <h1 className='char'>
+            <h1 className='char' ref={charEl}>
               <div data-char='Q'>O</div>
               <div data-char='.'>.</div>
               <div data-char='D'>O</div>
               <div data-char='u'>n</div>
-              <div data-char='s'>c</div>
+              <div data-char='s'>c</div>,
             </h1>
           </div>
           <h1> Web Developer</h1>
@@ -82,19 +98,19 @@ const Home = () => {
           <p>Let's get Social:</p>
           <div className='socials'>
             <a href='#'>
-              <FontAwesomeIcon icon={faTwitter} color='#ebecf0' />
+              <FontAwesomeIcon icon={faTwitter} color='#fff' />
             </a>
             <a href=''>
-              <FontAwesomeIcon icon={faFacebook} color='#ebecf0' />
+              <FontAwesomeIcon icon={faFacebook} color='#fff' />
             </a>
             <a href=''>
-              <FontAwesomeIcon icon={faGithub} color='#ebecf0' />
+              <FontAwesomeIcon icon={faGithub} color='#fff' />
             </a>
             <a href=''>
-              <FontAwesomeIcon icon={faLinkedin} color='#ebecf0' />
+              <FontAwesomeIcon icon={faLinkedin} color='#fff' />
             </a>
             <a href=''>
-              <FontAwesomeIcon icon={faYoutube} color='#ebecf0' />
+              <FontAwesomeIcon icon={faYoutube} color='#fff' />
             </a>
           </div>
         </div>

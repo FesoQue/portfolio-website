@@ -7,6 +7,7 @@ import {
   faLaptopCode,
   faTools,
 } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -42,27 +43,27 @@ const Header = () => {
         <div className='row-2-wrapper container'>
           <div className='nav-menu-list'>
             <div>
-              <a href='' className='menu-item'>
+              <NavLink to='/' className='menu-item'>
                 <FontAwesomeIcon icon={faHome} color='#fff' />
                 <span className='label one'>HOME</span>
-              </a>
+              </NavLink>
             </div>
-            <a href='' className='menu-item'>
+            <NavLink to='/about' className='menu-item'>
               <FontAwesomeIcon icon={faUser} color='#fff' />
               <span className='label two'>ABOUT</span>
-            </a>
-            <a href='' className='menu-item'>
+            </NavLink>
+            <NavLink to='/skills' className='menu-item'>
               <FontAwesomeIcon icon={faTools} color='#fff' />
               <span className='label three'>SKILLS</span>
-            </a>
-            <a href='' className='menu-item'>
+            </NavLink>
+            <NavLink to='/projects' className='menu-item'>
               <FontAwesomeIcon icon={faLaptopCode} color='#fff' />
               <span className='label four'>PROJECTS</span>
-            </a>
-            <a href='' className='menu-item'>
+            </NavLink>
+            <NavLink to='/contact' className='menu-item'>
               <FontAwesomeIcon icon={faEnvelope} color='#fff' />
               <span className='label five'>CONTACT</span>
-            </a>
+            </NavLink>
           </div>
         </div>
       </nav>
