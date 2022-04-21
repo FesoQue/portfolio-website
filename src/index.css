@@ -193,7 +193,7 @@ header {
        HOMEPAGE
    ===================  */
 .homepage {
-  height: calc(95vh - 20vh);
+  height: calc(100vh - 20vh);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -285,8 +285,16 @@ h1.char {
 }
 
 /* ===================
-        CONTACT
+        ABOUT
    ===================  */
-.contact {
-  margin-top: 60px;
+.section {
+  margin-top: 50px;
+}
+.section-title h1 {
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+.section-content p {
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
 }

@@ -2,13 +2,15 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section className='contact'>
-      <h4>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
-        obcaecati vel enim ad libero quasi, quibusdam voluptatum! Deserunt fugit
-        quod voluptate at perspiciatis eaque recusandae eveniet, sint,
-        praesentium accusantium excepturi.
-      </h4>
+    <section className='section contact-section'>
+      <div className='section-wrapper container'>
+        <div className='section-title'>
+          <h1>Contact</h1>
+        </div>
+        <div className='section-content-area'>
+          <div className='content'>{/*  */}</div>
+        </div>
+      </div>
     </section>
   );
 };
