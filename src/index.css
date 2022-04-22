@@ -96,6 +96,7 @@ button,
 textarea,
 select {
   font: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 ul {
   padding: 0;
@@ -152,7 +153,7 @@ header {
   font-size: 23px;
   display: flex;
   justify-content: center;
-  display: flex;
+  -webkit-tap-highlight-color: transparent;
 }
 .label {
   position: absolute;
@@ -168,7 +169,7 @@ header {
   background-color: var(--green);
   border-radius: 3px;
   transform: scale(0);
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .active svg {
   color: var(--gray3);
@@ -297,4 +298,29 @@ h1.char {
 .section-content p {
   margin-bottom: 0.6rem;
   line-height: 1.4;
+}
+.bio-length {
+  margin-bottom: 1.3rem;
+}
+.bio-length p {
+  font-size: 12px;
+  margin-bottom: 1.3rem;
+  color: var(--green-light);
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+.dots-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid var(--green-light);
+}
+.dot-active {
+  background: var(--green);
+  transition: background 0.3s ease-in-out;
 }
