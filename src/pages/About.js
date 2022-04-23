@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const About = () => {
-  const [bioLength, setBioLength] = useState('short');
+  const [bioLength, setBioLength] = useState('longest');
 
   const setActiveClass = (arg) => {
     switch (arg) {
@@ -71,51 +71,96 @@ const About = () => {
         </div>
         <div className='section-content-area'>
           <div className='section-content'>
-            <p>
-              Hi, my name is{' '}
-              <span style={{ textTransform: 'uppercase' }}>
-                Adefeso Qudus(Q.Dus)
-              </span>
-              , i'm a graduate of Electrical/Electronics Engineering. I
-              transitioned into web development to explore the creative and
-              analytical sides of my mind. I was simply fascinated with it.
-            </p>
-            <p>
-              I remembered the first time i discovered wordpress, a whole new
-              world of possibilities appeared before my eyes. I played around it
-              for days to see what i could create, and Voila!! my first ever
-              website was created. It was an entertainment blog website. I was
-              excited and really wants to create more magical things with it .
-              Even though i became really passionate and i want to create more
-              magical things to satisy my need for creativity, i just could'nt
-              continue due to academics workload. I reginited the flames and
-              passion for web development after i graduated and i have been
-              learning and creating ever since then.
-            </p>
-            <p>
-              As a person, I'm an ambitious, goal driven & detail oriented
-              frontend developer looking to leverage my working knowledge of
-              frontend technologies for a role in an established IT company with
-              the opportunity to work on challenging and diverse projects and
-              equally trying to help maximize productivity.
-            </p>
+            <div className='bio-text active-text'>
+              <p>
+                Hi, my name is{' '}
+                <span style={{ textTransform: 'uppercase' }}>
+                  Adefeso Qudus
+                </span>
+                , I studied Electrical Electronics Engineering.
+              </p>
+            </div>
+            <div className='bio-text'>
+              <p>
+                <span style={{ textTransform: 'uppercase' }}>
+                  Adefeso Qudus (Q.Dus)
+                </span>{' '}
+                transitioned into web development to explore the creative and
+                analytical sides of his mind. He was simply fascinated with it.
+              </p>
+            </div>
 
-            <p>
-              Also, I'm naturally curious, confident and always eager to broaden
-              my horizon by learning new technology one at a time{' '}
-            </p>
+            <div className='bio-text'>
+              <p>
+                <span style={{ textTransform: 'uppercase' }}>
+                  Adefeso Qudus(Q.Dus)
+                </span>{' '}
+                {' s'}
+                is an Electrical Engineer now turned to frontend developer. He
+                remembered the first time he discovered HTML, CSS, Wordpress a
+                whole new world of possibilities happened before his eyes.
+              </p>
+            </div>
 
-            <ul className='language-list'>
-              <li>Html%</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>Firebase</li>
-              <li>NextJs</li>
-              <li>Gsap</li>
-              <li>Bootstrap</li>
-              <li>Wordpress</li>
-            </ul>
+            <div className='bio-text'>
+              <p>
+                ADEFESO QUDUS (Q.DUS) is an Electrical Engineer now turned to
+                frontend developer. He remembered the first time he discovered
+                HTML, CSS, Wordpress a whole new world of possibilities happened
+                before his eyes. He fiddled with wordpress(because he finds it
+                easier then) for days to see what he could do with it. In the
+                process, his <a href=''>first ever website</a>was created. It
+                was an entertainment blog website.
+              </p>
+            </div>
+
+            <div className='bio-text'>
+              <p>
+                ADEFESO QUDUS(Q.DUS) is an Electrical Engineer now turned to
+                frontend developer. He remembered the first time he discovered
+                HTML, CSS, Wordpress a whole new world of possibilities happened
+                before his eyes. He fiddled with wordpress(because he finds it
+                easier then) for days to see what he could do with it. In the
+                process, his <a href=''>first ever website</a>was created. It
+                was an entertainment blog website. He was excited and really
+                wants to create more magical things with it . Even though he
+                became really passionate and i want to create more interesting
+                things on the web to satify his need for creativity, he just
+                couldn't due to academics workload.
+              </p>
+
+              <p>
+                As a person, he's an ambitious, goal driven & detail oriented
+                frontend developer looking to leverage my working knowledge of
+                frontend technologies for a role in an established IT company.
+              </p>
+            </div>
+
+            <div className='bio-text'>
+              <p>
+                ADEFESO QUDUS(Q.DUS) is an Electrical Engineer now turned to
+                frontend developer. He remembered the first time he discovered
+                HTML, CSS, Wordpress a whole new world of possibilities happened
+                before his eyes. He fiddled with wordpress(because he finds it
+                easier then) for days to see what he could do with it. In the
+                process, his <a href=''>first ever website</a>was created. It
+                was an entertainment blog website. He was excited and really
+                wants to create more magical things with it . Even though he
+                became really passionate and i want to create more interesting
+                things on the web to satify his need for creativity, he just
+                couldn't due to academics workload.
+              </p>
+
+              <p>
+                As a person, he's an ambitious, goal driven & detail oriented
+                frontend developer looking to leverage my working knowledge of
+                frontend technologies for a role in an established IT company
+                with the opportunity to work on challenging and diverse projects
+                and equally trying to help maximize productivity. He's also
+                naturally curious, confident and always eager to broaden his
+                horizon by learning new technology one at a time.
+              </p>
+            </div>
           </div>
         </div>
       </div>

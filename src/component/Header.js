@@ -44,24 +44,24 @@ const Header = () => {
           <div className='nav-menu-list'>
             <div>
               <NavLink to='/' className='menu-item'>
-                <FontAwesomeIcon icon={faHome} color='#fff' />
+                <FontAwesomeIcon icon={faHome} color='#a7a7a7' />
                 <span className='label one'>HOME</span>
               </NavLink>
             </div>
             <NavLink to='/about' className='menu-item'>
-              <FontAwesomeIcon icon={faUser} color='#fff' />
+              <FontAwesomeIcon icon={faUser} color='#a7a7a7' />
               <span className='label two'>ABOUT</span>
             </NavLink>
             <NavLink to='/skills' className='menu-item'>
-              <FontAwesomeIcon icon={faTools} color='#fff' />
+              <FontAwesomeIcon icon={faTools} color='#a7a7a7' />
               <span className='label three'>SKILLS</span>
             </NavLink>
             <NavLink to='/projects' className='menu-item'>
-              <FontAwesomeIcon icon={faLaptopCode} color='#fff' />
+              <FontAwesomeIcon icon={faLaptopCode} color='#a7a7a7' />
               <span className='label four'>PROJECTS</span>
             </NavLink>
             <NavLink to='/contact' className='menu-item'>
-              <FontAwesomeIcon icon={faEnvelope} color='#fff' />
+              <FontAwesomeIcon icon={faEnvelope} color='#a7a7a7' />
               <span className='label five'>CONTACT</span>
             </NavLink>
           </div>

@@ -172,7 +172,7 @@ header {
   transition: transform 0.3s ease-in-out;
 }
 .active svg {
-  color: var(--gray3);
+  color: #fff;
 }
 .active .label {
   transform: scale(1);
@@ -319,8 +319,15 @@ h1.char {
   height: 15px;
   border-radius: 50%;
   border: 2px solid var(--green-light);
+  cursor: pointer;
 }
 .dot-active {
   background: var(--green);
   transition: background 0.3s ease-in-out;
+}
+.bio-text p {
+  display: none;
+}
+.bio-text.active-text p {
+  display: block;
 }
