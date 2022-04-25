@@ -9,6 +9,13 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 
+import { RiHome5Line } from 'react-icons/ri';
+import { AiOutlineUser } from 'react-icons/ai';
+import { VscTools } from 'react-icons/vsc';
+import { RiCodeSSlashFill } from 'react-icons/ri';
+import { SiCodeforces } from 'react-icons/si';
+import { HiOutlineMail } from 'react-icons/hi';
+
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
 
@@ -44,24 +51,24 @@ const Header = () => {
           <div className='nav-menu-list'>
             <div>
               <NavLink to='/' className='menu-item'>
-                <FontAwesomeIcon icon={faHome} color='#a7a7a7' />
+                <RiHome5Line />
                 <span className='label one'>HOME</span>
               </NavLink>
             </div>
             <NavLink to='/about' className='menu-item'>
-              <FontAwesomeIcon icon={faUser} color='#a7a7a7' />
+              <AiOutlineUser />
               <span className='label two'>ABOUT</span>
             </NavLink>
             <NavLink to='/skills' className='menu-item'>
-              <FontAwesomeIcon icon={faTools} color='#a7a7a7' />
+              <VscTools />
               <span className='label three'>SKILLS</span>
             </NavLink>
             <NavLink to='/projects' className='menu-item'>
-              <FontAwesomeIcon icon={faLaptopCode} color='#a7a7a7' />
+              <RiCodeSSlashFill />
               <span className='label four'>PROJECTS</span>
             </NavLink>
             <NavLink to='/contact' className='menu-item'>
-              <FontAwesomeIcon icon={faEnvelope} color='#a7a7a7' />
+              <HiOutlineMail />
               <span className='label five'>CONTACT</span>
             </NavLink>
           </div>

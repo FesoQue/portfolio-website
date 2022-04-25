@@ -1,14 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import Header from '../component/Header';
 import { gsap } from 'gsap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faFacebook,
-  faGithub,
-  faLinkedin,
-  faTwitter,
-  faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
+import { GrFacebookOption } from 'react-icons/gr';
+import { FiInstagram } from 'react-icons/fi';
+import { AiOutlineTwitter } from 'react-icons/ai';
+import { AiFillLinkedin } from 'react-icons/ai';
 
 const Home = () => {
   const textsRef = useRef();
@@ -89,29 +84,26 @@ const Home = () => {
             <span>- beautiful user Interface</span>
             <span>- functional user experience</span>
             <span>- mobile/responsive design</span>
-            <span>- great browser compatibility</span>
-            <span>- good web accessibility</span>
+            <span>- good browser compatibility</span>
+            <span>- great web accessibility</span>
           </h2>
         </div>
         {/* socials */}
         <div className='social-wrapper'>
-          <p>Let's get Social:</p>
-          <div className='socials'>
-            <a href='#'>
-              <FontAwesomeIcon icon={faTwitter} color='#fff' />
-            </a>
-            <a href=''>
-              <FontAwesomeIcon icon={faFacebook} color='#fff' />
-            </a>
-            <a href=''>
-              <FontAwesomeIcon icon={faGithub} color='#fff' />
-            </a>
-            <a href=''>
-              <FontAwesomeIcon icon={faLinkedin} color='#fff' />
-            </a>
-            <a href=''>
-              <FontAwesomeIcon icon={faYoutube} color='#fff' />
-            </a>
+          <p className='connect-text'>Let's connect</p>
+          <div className='social'>
+            <span className='fb'>
+              <GrFacebookOption />
+            </span>
+            <span className='ig'>
+              <FiInstagram />
+            </span>
+            <span className='twitter'>
+              <AiOutlineTwitter />
+            </span>
+            <span className='linkedin'>
+              <AiFillLinkedin />
+            </span>
           </div>
         </div>
       </div>

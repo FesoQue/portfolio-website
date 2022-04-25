@@ -6,22 +6,22 @@ const About = () => {
   const setActiveClass = (arg) => {
     switch (arg) {
       case 'shortest':
-        setActiveClass('shortest');
+        setBioLength('shortest');
         break;
       case 'shorter':
-        setActiveClass('shorter');
+        setBioLength('shorter');
         break;
       case 'short':
-        setActiveClass('short');
+        setBioLength('short');
         break;
       case 'long':
-        setActiveClass('long');
+        setBioLength('long');
         break;
       case 'longer':
-        setActiveClass('longer');
+        setBioLength('longer');
         break;
       case 'longest':
-        setActiveClass('longest');
+        setBioLength('longest');
         break;
 
       default:
@@ -30,9 +30,9 @@ const About = () => {
   };
   return (
     <section className='section about-section'>
-      <div className='section-wrapper container'>
+      <div className='section-contents-wrapper container'>
         <div className='section-title'>
-          <h1>Me, Myself & I</h1>
+          <h1>About Myself</h1>
         </div>
         <div className='bio-length'>
           <p>Adjust Bio Length:</p>
@@ -41,48 +41,72 @@ const About = () => {
               className={`${
                 bioLength === 'shortest' ? 'dot dot-active' : 'dot'
               }`}
-              onClick={() => setBioLength('shortest')}
+              onClick={() => setActiveClass('shortest')}
             ></div>
             <div
               className={`${
                 bioLength === 'shorter' ? 'dot dot-active' : 'dot'
               }`}
-              onClick={() => setBioLength('shorter')}
+              onClick={() => setActiveClass('shorter')}
             ></div>
             <div
               className={`${bioLength === 'short' ? 'dot dot-active' : 'dot'}`}
-              onClick={() => setBioLength('short')}
+              onClick={() => setActiveClass('short')}
             ></div>
             <div
               className={`${bioLength === 'long' ? 'dot dot-active' : 'dot'}`}
-              onClick={() => setBioLength('long')}
+              onClick={() => setActiveClass('long')}
             ></div>
             <div
               className={`${bioLength === 'longer' ? 'dot dot-active' : 'dot'}`}
-              onClick={() => setBioLength('longer')}
+              onClick={() => setActiveClass('longer')}
             ></div>
             <div
               className={`${
                 bioLength === 'longest' ? 'dot dot-active' : 'dot'
               }`}
-              onClick={() => setBioLength('longest')}
+              onClick={() => setActiveClass('longest')}
             ></div>
+          </div>
+          <div className='length-tags'>
+            <p>shortest</p>
+            <p>Longest</p>
           </div>
         </div>
         <div className='section-content-area'>
           <div className='section-content'>
-            <div className='bio-text active-text'>
+            <div
+              className={
+                bioLength === 'shortest' ? 'bio-text active-text' : 'bio-text'
+              }
+            >
               <p>
                 Hi, my name is{' '}
-                <span style={{ textTransform: 'uppercase' }}>
+                <span
+                  style={{
+                    textTransform: 'uppercase',
+                    fontWeight: '500',
+                    fontStyle: 'italic',
+                  }}
+                >
                   Adefeso Qudus
                 </span>
                 , I studied Electrical Electronics Engineering.
               </p>
             </div>
-            <div className='bio-text'>
+            <div
+              className={
+                bioLength === 'shorter' ? 'bio-text active-text' : 'bio-text'
+              }
+            >
               <p>
-                <span style={{ textTransform: 'uppercase' }}>
+                <span
+                  style={{
+                    textTransform: 'uppercase',
+                    fontWeight: '500',
+                    fontStyle: 'italic',
+                  }}
+                >
                   Adefeso Qudus (Q.Dus)
                 </span>{' '}
                 transitioned into web development to explore the creative and
@@ -90,43 +114,79 @@ const About = () => {
               </p>
             </div>
 
-            <div className='bio-text'>
+            <div
+              className={
+                bioLength === 'short' ? 'bio-text active-text' : 'bio-text'
+              }
+            >
               <p>
-                <span style={{ textTransform: 'uppercase' }}>
-                  Adefeso Qudus(Q.Dus)
+                <span
+                  style={{
+                    textTransform: 'uppercase',
+                    fontWeight: '500',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  Adefeso Qudus (Q.Dus)
                 </span>{' '}
-                {' s'}
                 is an Electrical Engineer now turned to frontend developer. He
                 remembered the first time he discovered HTML, CSS, Wordpress a
                 whole new world of possibilities happened before his eyes.
               </p>
             </div>
 
-            <div className='bio-text'>
+            <div
+              className={
+                bioLength === 'long' ? 'bio-text active-text' : 'bio-text'
+              }
+            >
               <p>
-                ADEFESO QUDUS (Q.DUS) is an Electrical Engineer now turned to
-                frontend developer. He remembered the first time he discovered
-                HTML, CSS, Wordpress a whole new world of possibilities happened
-                before his eyes. He fiddled with wordpress(because he finds it
-                easier then) for days to see what he could do with it. In the
-                process, his <a href=''>first ever website</a>was created. It
-                was an entertainment blog website.
+                <span
+                  style={{
+                    textTransform: 'uppercase',
+                    fontWeight: '500',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  Adefeso Qudus (Q.Dus)
+                </span>{' '}
+                is an Electrical Engineer now turned to frontend developer. He
+                remembered the first time he discovered HTML, CSS, Wordpress a
+                whole new world of possibilities happened before his eyes. He
+                fiddled with wordpress(because he finds it easier then) for days
+                to see what he could do with it. In the process, his{' '}
+                <a href=''>first ever website</a> was created. It was an
+                entertainment blog website.
               </p>
             </div>
 
-            <div className='bio-text'>
+            <div
+              className={
+                bioLength === 'longer' ? 'bio-text active-text' : 'bio-text'
+              }
+            >
               <p>
-                ADEFESO QUDUS(Q.DUS) is an Electrical Engineer now turned to
-                frontend developer. He remembered the first time he discovered
-                HTML, CSS, Wordpress a whole new world of possibilities happened
-                before his eyes. He fiddled with wordpress(because he finds it
-                easier then) for days to see what he could do with it. In the
-                process, his <a href=''>first ever website</a>was created. It
-                was an entertainment blog website. He was excited and really
-                wants to create more magical things with it . Even though he
-                became really passionate and i want to create more interesting
-                things on the web to satify his need for creativity, he just
-                couldn't due to academics workload.
+                <span
+                  style={{
+                    textTransform: 'uppercase',
+                    fontWeight: '500',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  Adefeso Qudus (Q.Dus)
+                </span>{' '}
+                is an Electrical Engineer now turned to frontend developer. He
+                remembered the first time he discovered HTML, CSS, Wordpress a
+                whole new world of possibilities happened before his eyes. He
+                fiddled with wordpress(because he finds it easier then) for days
+                to see what he could do with it. In the process, his{' '}
+                <a href=''>first ever website</a> was created. It was an
+                entertainment blog website. He was excited and really wants to
+                create more magical things with it . Even though he became
+                really passionate and want to create more interesting things on
+                the web to satisfy his need for creativity, he just couldn't due
+                to academics workload. He reginited the flames and passion for
+                web development after he graduated.
               </p>
 
               <p>
@@ -136,19 +196,36 @@ const About = () => {
               </p>
             </div>
 
-            <div className='bio-text'>
+            <div
+              className={
+                bioLength === 'longest' ? 'bio-text active-text' : 'bio-text'
+              }
+            >
               <p>
-                ADEFESO QUDUS(Q.DUS) is an Electrical Engineer now turned to
-                frontend developer. He remembered the first time he discovered
-                HTML, CSS, Wordpress a whole new world of possibilities happened
-                before his eyes. He fiddled with wordpress(because he finds it
-                easier then) for days to see what he could do with it. In the
-                process, his <a href=''>first ever website</a>was created. It
-                was an entertainment blog website. He was excited and really
-                wants to create more magical things with it . Even though he
-                became really passionate and i want to create more interesting
-                things on the web to satify his need for creativity, he just
-                couldn't due to academics workload.
+                <span
+                  style={{
+                    textTransform: 'uppercase',
+                    fontWeight: '500',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  Adefeso Qudus (Q.Dus)
+                </span>{' '}
+                is an Electrical Engineer now turned to frontend developer. He
+                stransitioned into web development to explore the creative and
+                analytical sides of his mind. He was simply fascinated with it.
+                He remembered the first time he discovered HTML, CSS, Wordpress
+                a whole new world of possibilities happened before his eyes. He
+                fiddled with wordpress(because he finds it easier then) for days
+                to see what he could do with it. In the process, his{' '}
+                <a href=''>first ever website</a> was created. It was an
+                entertainment blog website. He was excited and really wants to
+                create more magical things with it . Even though he became
+                really passionate and want to create more interesting things on
+                the web to satisfy his need for creativity, he just couldn't due
+                to academics workload. He reginited the flames and passion for
+                web development after he graduated, and he have been learning
+                and creating ever since then
               </p>
 
               <p>
