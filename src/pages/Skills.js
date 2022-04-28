@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Services from '../component/Services';
 import { gsap } from 'gsap';
-import MOBILE from '../assets/mobile.gif';
-import ILLUSTRATOR from '../assets/illustrator.gif';
 import HTML_ICON from '../assets/html.svg';
 import CSS3_ICON from '../assets/css.svg';
 import JAVASCRIPT_ICON from '../assets/javascript.svg';
@@ -20,10 +19,9 @@ import NPM_ICON from '../assets/npm.svg';
 
 const Skills = () => {
   const circle = useRef();
-  // const line = useRef();
-  const skillEle = useRef();
 
   const [option, setOption] = useState('skills');
+  const [stack, setStack] = useState('html');
 
   const setActiveClass = (arg) => {
     switch (arg) {
@@ -39,11 +37,47 @@ const Skills = () => {
     }
   };
 
+  const setActiveLine = (arg) => {
+    switch (arg) {
+      case 'html':
+        setStack('html');
+        break;
+      case 'css':
+        setStack('css');
+        break;
+      case 'js':
+        setStack('javascript');
+        break;
+      case 'react':
+        setStack('react');
+        break;
+      case 'firebase':
+        setStack('firebase');
+        break;
+      case 'git':
+        setStack('git');
+        break;
+      case 'next':
+        setStack('next');
+        break;
+      case 'gsap':
+        setStack('gsap');
+        break;
+      case 'bootstrap':
+        setStack('bootstrap');
+        break;
+
+      default:
+        break;
+    }
+  };
+
   const handleRotation = (e) => {
-    const line = e.currentTarget.children[0];
-    line.style.height = '130px';
-    line.style.transform = e.currentTarget.style.transform;
-    skillEle.current.innerText = e.currentTarget.dataset.name;
+    // const line = e.currentTarget.children[0];
+    // line.style.height = '130px';
+    // line.style.transform = 'rotate(0deg)';
+    // skillEle.current.innerText = e.currentTarget.dataset.name;
+    console.log(e.currentTarget.style.transform);
   };
 
   useEffect(() => {
@@ -71,31 +105,27 @@ const Skills = () => {
         <div className='section-title'>
           <h1>Skills & Services</h1>
         </div>
-        <div className='section-content-area'>
-          <div className='content'>{/*  */}</div>
+
+        <div className='tab-btn-wrapper'>
+          <button
+            onClick={() => setActiveClass('skills')}
+            className={`tab-btn ${
+              option === 'skills' ? 'active-tab-btn' : 'null'
+            }`}
+          >
+            Skills
+          </button>
+          <button
+            onClick={() => setActiveClass('services')}
+            className={`tab-btn ${
+              option === 'services' ? 'active-tab-btn' : 'null'
+            }`}
+          >
+            Services
+          </button>
         </div>
-      </div>
-      <div className='container tab-btn-wrapper'>
-        <button
-          onClick={() => setActiveClass('skills')}
-          className={`tab-btn ${
-            option === 'skills' ? 'active-tab-btn' : 'null'
-          }`}
-        >
-          Skills
-        </button>
-        <button
-          onClick={() => setActiveClass('services')}
-          className={`tab-btn ${
-            option === 'services' ? 'active-tab-btn' : 'null'
-          }`}
-        >
-          Services
-        </button>
-      </div>
-      <div className='section-content-area container'>
         <div className='section-content'>
-          {/* skills */}
+          {/* ========== skills ========== */}
           <div
             className={
               option === 'skills'
@@ -103,91 +133,98 @@ const Skills = () => {
                 : 'skills-content'
             }
           >
-            {/* technial */}
+            {/* technical */}
             <div className='technical-skills'>
               <h3>Tech stacks:</h3>
               <div id='main-circle' ref={circle}>
                 <div className='degree-wrapper'>
-                  <div
-                    className='degree degree-1'
-                    onClick={(e) => handleRotation(e)}
-                    data-name='HTML'
-                  >
-                    <span className='line'></span>
+                  <div className='degree' onClick={() => setActiveLine('html')}>
+                    <span
+                      className={`line ${
+                        stack === 'html' ? 'active-line' : ''
+                      }`}
+                    ></span>
                     <img src={HTML_ICON} alt='html5' />
                   </div>
-                  <div
-                    className='degree degree-2'
-                    onClick={(e) => handleRotation(e)}
-                    data-name='CSS3'
-                  >
-                    <span className='line'></span>
+
+                  <div className='degree' onClick={() => setActiveLine('css')}>
+                    <span
+                      className={`line ${stack === 'css' ? 'active-line' : ''}`}
+                    ></span>
                     <img src={CSS3_ICON} alt='css3' />
                   </div>
-                  <div
-                    className='degree degree-3'
-                    onClick={(e) => handleRotation(e)}
-                    data-name='JS'
-                  >
-                    <span className='line'></span>
+
+                  <div className='degree' onClick={() => setActiveLine('js')}>
+                    <span
+                      className={`line ${
+                        stack === 'javascript' ? 'active-line' : ''
+                      }`}
+                    ></span>
                     <img src={JAVASCRIPT_ICON} alt='javascript' />
                   </div>
                   <div
-                    className='degree degree-4'
-                    onClick={(e) => handleRotation(e)}
-                    data-name='React'
+                    className='degree'
+                    onClick={() => setActiveLine('react')}
                   >
-                    <span className='line'></span>
+                    <span
+                      className={`line ${
+                        stack === 'react' ? 'active-line' : ''
+                      }`}
+                    ></span>
                     <img src={REACT_ICON} alt='react' />
                   </div>
                   <div
                     className='degree'
-                    onClick={(e) => handleRotation(e)}
-                    data-name='Firebase'
+                    onClick={() => setActiveLine('firebase')}
                   >
-                    <span className='line'></span>
+                    <span
+                      className={`line ${
+                        stack === 'firebase' ? 'active-line' : ''
+                      }`}
+                    ></span>
                     <img src={FIREBASE_ICON} alt='firebase' />
                   </div>
 
-                  <div
-                    className='degree'
-                    onClick={(e) => handleRotation(e)}
-                    data-name='Git'
-                  >
-                    <span className='line'></span>
+                  <div className='degree' onClick={() => setActiveLine('git')}>
+                    <span
+                      className={`line ${stack === 'git' ? 'active-line' : ''}`}
+                    ></span>
                     <img src={GIT_ICON} alt='git' />
                   </div>
 
-                  <div
-                    className='degree'
-                    onClick={(e) => handleRotation(e)}
-                    data-name='NextJS'
-                  >
-                    <span className='line'></span>
+                  <div className='degree' onClick={() => setActiveLine('next')}>
+                    <span
+                      className={`line ${
+                        stack === 'next' ? 'active-line' : ''
+                      }`}
+                    ></span>
                     <img src={NEXT_ICON} alt='nextjs' />
                   </div>
 
-                  <div
-                    className='degree'
-                    onClick={(e) => handleRotation(e)}
-                    data-name='GSAP'
-                  >
-                    <span className='line'></span>
+                  <div className='degree' onClick={() => setActiveLine('gsap')}>
+                    <span
+                      className={`line ${
+                        stack === 'gsap' ? 'active-line' : ''
+                      }`}
+                    ></span>
                     <img src={GSAP_ICON} alt='bootstrap' />
                   </div>
 
                   <div
                     className='degree'
-                    onClick={(e) => handleRotation(e)}
-                    data-name='Bootstrap'
+                    onClick={() => setActiveLine('bootstrap')}
                   >
-                    <span className='line'></span>
+                    <span
+                      className={`line ${
+                        stack === 'bootstrap' ? 'active-line' : ''
+                      }`}
+                    ></span>
                     <img src={BOOTSTRAP_ICON} alt='gsap' />
                   </div>
                 </div>
 
                 <div id='center-label'>
-                  <p ref={skillEle}>skills</p>
+                  <p>{stack}</p>
                 </div>
               </div>
             </div>
@@ -219,48 +256,43 @@ const Skills = () => {
                   <img src={CODESANDBOX_ICON} alt='codesandbox' />
                 </div>
 
-                <div className='tool'>
+                {/* <div className='tool'>
                   <img src={NPM_ICON} alt='npm' />
-                </div>
+                </div> */}
               </div>
             </div>
             {/* non technical */}
             <div className='non-technical-skills'>
               <h3>Soft skills:</h3>
               <div className='soft-skills-wrapper'>
-                <div className='soft-skill ss-1'>
-                  <div className='square-shape'></div>
+                <div className='soft-skill'>
                   <p>Good Communication Skills</p>
                 </div>
 
-                <div className='soft-skill ss-1'>
-                  <div className='square-shape'></div>
+                <div className='soft-skill'>
                   <p>Critical Thinking & Problem Solving</p>
                 </div>
 
-                <div className='soft-skill ss-1'>
-                  <div className='square-shape'></div>
+                <div className='soft-skill'>
                   <p>Team Work & Collaboration</p>
                 </div>
 
-                <div className='soft-skill ss-1'>
-                  <div className='square-shape'></div>
+                <div className='soft-skill'>
                   <p>Professionalism & Strong Work Ethics</p>
                 </div>
 
-                <div className='soft-skill ss-1'>
-                  <div className='square-shape'></div>
+                <div className='soft-skill'>
                   <p>Flexibility & Adaptability</p>
                 </div>
 
-                <div className='soft-skill ss-1'>
-                  <div className='square-shape'></div>
+                <div className='soft-skill'>
                   <p>Time Maanagement</p>
                 </div>
               </div>
             </div>
           </div>
-          {/* services */}
+
+          {/* =========== services ========== */}
           <div
             className={
               option === 'services'
@@ -268,25 +300,10 @@ const Skills = () => {
                 : 'services-content'
             }
           >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-              dolore. Accusantium eius sint, quasi odio ullam debitis
-              perspiciatis nisi ex perferendis minus non ad veritatis? Fugiat
-              iste voluptas molestiae sint repellat veritatis dolorum esse
-              quidem. Facere dolor pariatur autem voluptatibus tempore
-              recusandae aliquid dolores enim, temporibus numquam? Animi ut quae
-              alias facere deleniti odio laboriosam inventore, est sit quisquam
-              in rem magnam ex error quidem veritatis obcaecati quod doloribus
-              commodi vitae consequatur, hic architecto? Dolores saepe illo
-              officia dolorum laboriosam.
-            </p>
+            <Services />
           </div>
         </div>
       </div>
-      {/* <div>
-        <img src={MOBILE} alt='' />
-        <img src={ILLUSTRATOR} alt='' />
-      </div> */}
     </section>
   );
 };
