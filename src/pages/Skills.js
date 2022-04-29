@@ -16,6 +16,7 @@ import CODEPEN_ICON from '../assets/codepen.svg';
 import CODESANDBOX_ICON from '../assets/code-sandbox.svg';
 import ADOBE_ICON from '../assets/adobe-xd.svg';
 import NPM_ICON from '../assets/npm.svg';
+import PHOTOSHOP_ICON from '../assets/photoshop.svg';
 
 const Skills = () => {
   const circle = useRef();
@@ -135,7 +136,7 @@ const Skills = () => {
           >
             {/* technical */}
             <div className='technical-skills'>
-              <h3>Tech stacks:</h3>
+              <h3>Tech Stacks:</h3>
               <div id='main-circle' ref={circle}>
                 <div className='degree-wrapper'>
                   <div className='degree' onClick={() => setActiveLine('html')}>
@@ -249,6 +250,10 @@ const Skills = () => {
                 </div>
 
                 <div className='tool'>
+                  <img src={PHOTOSHOP_ICON} alt='photoshop' />
+                </div>
+
+                <div className='tool'>
                   <img src={ADOBE_ICON} alt='adobe-xd' />
                 </div>
 
@@ -256,14 +261,14 @@ const Skills = () => {
                   <img src={CODESANDBOX_ICON} alt='codesandbox' />
                 </div>
 
-                {/* <div className='tool'>
+                <div className='tool'>
                   <img src={NPM_ICON} alt='npm' />
-                </div> */}
+                </div>
               </div>
             </div>
             {/* non technical */}
             <div className='non-technical-skills'>
-              <h3>Soft skills:</h3>
+              <h3>Soft Skills:</h3>
               <div className='soft-skills-wrapper'>
                 <div className='soft-skill'>
                   <p>Good Communication Skills</p>
@@ -286,14 +291,14 @@ const Skills = () => {
                 </div>
 
                 <div className='soft-skill'>
-                  <p>Time Maanagement</p>
+                  <p>Time Management</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* =========== services ========== */}
-          <div
+          <section
             className={
               option === 'services'
                 ? 'services-content active-content'
@@ -301,7 +306,7 @@ const Skills = () => {
             }
           >
             <Services />
-          </div>
+          </section>
         </div>
       </div>
     </section>
