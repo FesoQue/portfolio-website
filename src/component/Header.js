@@ -65,7 +65,7 @@ const Header = () => {
             </NavLink>
             <NavLink to='/projects' className='menu-item'>
               <RiCodeSSlashFill />
-              <span className='label four'>WORKS</span>
+              <span className='label four'>WORK</span>
             </NavLink>
             <NavLink to='/contact' className='menu-item'>
               <HiOutlineMail />
