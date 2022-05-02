@@ -114,46 +114,92 @@ const Projects = () => {
             <div className='p-card p-card-6'>
               <div className='p-card-content'>
                 <h4>Digital Banking Landing Page</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consectetur, illo?
-                </p>
+                <div className='lang-tags'>
+                  <button className='lang-tag html-tag'>html</button>
+                  <button className='lang-tag css-tag'>css</button>
+                  <button className='lang-tag js-tag'>javascript</button>
+                </div>
+
+                <div className='project-links'>
+                  <a href='' className='github'>
+                    <AiFillGithub />
+                  </a>
+                  <a href='' className='github'>
+                    <FiExternalLink />
+                  </a>
+                </div>
               </div>
             </div>
             <div className='p-card p-card-7'>
               <div className='p-card-content'>
                 <h4>Interactive Pricing Component</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consectetur, illo?
-                </p>
+                <div className='lang-tags'>
+                  <button className='lang-tag bootstrap-tag'> bootstrap</button>
+                </div>
+
+                <div className='project-links'>
+                  <a href='' className='github'>
+                    <AiFillGithub />
+                  </a>
+                  <a href='' className='github'>
+                    <FiExternalLink />
+                  </a>
+                </div>
               </div>
             </div>
             <div className='p-card p-card-8'>
               <div className='p-card-content'>
                 <h4>(Devpadi) Github User Finder</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consectetur, illo?
-                </p>
+                <div className='lang-tags'>
+                  <button className='lang-tag react-tag'>react</button>
+                </div>
+
+                <div className='project-links'>
+                  <a href='' className='github'>
+                    <AiFillGithub />
+                  </a>
+                  <a href='' className='github'>
+                    <FiExternalLink />
+                  </a>
+                </div>
               </div>
             </div>
             <div className='p-card p-card-9'>
               <div className='p-card-content'>
                 <h4>Room Homepage Master</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consectetur, illo?
-                </p>
+                <div className='lang-tags'>
+                  <button className='lang-tag html-tag'>html</button>
+                  <button className='lang-tag css-tag'>css</button>
+                  <button className='lang-tag js-tag'>javascript</button>
+                </div>
+
+                <div className='project-links'>
+                  <a href='' className='github'>
+                    <AiFillGithub />
+                  </a>
+                  <a href='' className='github'>
+                    <FiExternalLink />
+                  </a>
+                </div>
               </div>
             </div>
             <div className='p-card p-card-10'>
               <div className='p-card-content'>
                 <h4>Social Media Dashboard</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Consectetur, illo?
-                </p>
+                <div className='lang-tags'>
+                  <button className='lang-tag html-tag'>html</button>
+                  <button className='lang-tag css-tag'>css</button>
+                  <button className='lang-tag js-tag'>javascript</button>
+                </div>
+
+                <div className='project-links'>
+                  <a href='' className='github'>
+                    <AiFillGithub />
+                  </a>
+                  <a href='' className='github'>
+                    <FiExternalLink />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
