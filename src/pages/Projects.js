@@ -53,14 +53,13 @@ const Projects = () => {
             </div>
             <div className='p-card p-card-3'>
               <div className='p-card-content'>
-                <h4>Coinverse Crypto Tracking website</h4>
+                <h4>Live Crypto Prices Tracker</h4>
                 <div className='lang-tags'>
                   <button className='lang-tag react-tag'>react</button>
                   <button className='lang-tag context-tag chartjs-tag'>
                     Context
                   </button>
                   <button className='lang-tag firebase-tag'>firebase</button>
-                  <button className='lang-tag mui-tag'>MUI</button>
                   <button className='lang-tag chartjs-tag'>Chartjs</button>
                 </div>
 

@@ -92,18 +92,18 @@ const Home = () => {
         <div className='social-wrapper'>
           <p className='connect-text'>Let's connect</p>
           <div className='social'>
-            <span className='fb'>
+            <a href='' className='fb'>
               <GrFacebookOption />
-            </span>
-            <span className='ig'>
+            </a>
+            <a href='' className='ig'>
               <FiInstagram />
-            </span>
-            <span className='twitter'>
+            </a>
+            <a href='' className='twitter'>
               <AiOutlineTwitter />
-            </span>
-            <span className='linkedin'>
+            </a>
+            <a href='' className='linkedin'>
               <AiFillLinkedin />
-            </span>
+            </a>
           </div>
         </div>
       </div>

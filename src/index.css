@@ -69,6 +69,10 @@ body {
   font-family: 'Karla', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  background-image: url('./assets/bg-stars.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h1,
 h2,
@@ -185,7 +189,7 @@ header {
   transform: scale(1);
 }
 .two {
-  background-color: #0f5bff;
+  background-color: var(--orange);
 }
 .three {
   background-color: #ff495f;
@@ -281,6 +285,7 @@ h1.char {
   height: 50px;
   margin-top: 2rem;
   background: #31383d;
+  background: linear-gradient(to right, var(--green-light), var(--cyan));
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
@@ -295,16 +300,21 @@ h1.char {
   align-items: center;
   padding: 0 10px;
 }
-.social > span {
+.social > a {
   margin: 0 0.5em;
-  opacity: 0;
   transform: scale(0.1);
-  color: #fff;
+  color: var(--gray8);
   box-shadow: rgba(0, 0, 0, 0.8);
-  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
-.social > span:hover {
-  color: var(--cyan);
+.social-wrapper:hover .social > a {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.social > a:hover {
+  color: var(--gray7);
 }
 .connect-text {
   position: absolute;
@@ -351,17 +361,10 @@ h1.char {
 .social-wrapper:hover .linkedin {
   transition-delay: 0.2s;
 }
-.social-wrapper:hover .social > span {
-  opacity: 1;
-  transform: scale(1.1);
-}
 
 /* ===================
         ABOUT
    ===================  */
-.section-contents-wrapper {
-  padding: 50px 0 40px;
-}
 .section-title h1 {
   --bg-size: 400%;
   --color-one: #4ee44e;
@@ -384,6 +387,9 @@ h1.char {
   to {
     background-position: var(--bg-size) 0;
   }
+}
+.section-contents-wrapper {
+  padding: 50px 0 40px;
 }
 .section-content p {
   margin-bottom: 0.6rem;
@@ -483,8 +489,6 @@ h1.char {
   width: 300px;
   height: 300px;
   margin: 0 auto 2.5rem;
-  /* outline: 1px solid red; */
-  /* background: gold; */
 }
 
 #center-label {
@@ -500,7 +504,7 @@ h1.char {
   border-radius: 50%;
   text-transform: uppercase;
   z-index: 999;
-  box-shadow: 0 0px 20px var(--gray3);
+  box-shadow: 0 0px 5px var(--gray3);
 }
 #center-label p {
   font-size: 11px;
@@ -808,25 +812,55 @@ textarea {
   color: var(--gray1);
   border: 0;
   outline: 0;
+  border-radius: var(--radius);
 }
 .form-btn {
   font-size: 18px;
   padding: 1rem 0;
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   text-transform: uppercase;
   background-color: var(--green-light);
   background: linear-gradient(to right, var(--green-light), var(--cyan));
+  border-radius: var(--radius);
 }
-.contact-info-container {
-  margin-top: 3rem;
+.contact-info {
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--gray6);
+}
+.contact-info div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contact-info div:last-child {
+  margin-bottom: 0;
+}
+.contact-info div > img {
+  width: 40px;
+  margin-right: 1rem;
+}
+.social-info {
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--gray6);
 }
 .social-info div {
   display: flex;
   justify-content: space-between;
 }
-.social-info div > span {
+.social-info div > a {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  background-color: var(--gray7);
   color: white;
+  transition: 0.3s ease-in-out;
+}
+.social-info div > a:hover {
+  background: linear-gradient(to right, var(--green-light), var(--cyan));
+  color: var(--gray8);
 }
 
 @media screen and (min-width: 376px) {
@@ -836,18 +870,71 @@ textarea {
   }
 }
 @media screen and (min-width: 630px) {
+  .intro-text h1 {
+    font-size: 3rem;
+  }
+  .job-desc p {
+    max-width: 80ch;
+  }
   .p-card-1 > .p-card-content,
   .p-card-3 > .p-card-content {
     transform: translateY(130px);
   }
 }
 @media screen and (min-width: 1000px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
   .section-title h1 {
     font-size: 3rem;
     margin-bottom: 2.5rem;
   }
-  .container {
-    width: 80%;
-    margin: 0 auto;
+  .intro-text h1 {
+    font-size: 4rem;
+  }
+  .job-desc p {
+    max-width: 80ch;
+  }
+  .multitext span {
+    font-size: 1.3rem;
+    color: #4ee44e;
+    font-weight: 700;
+    display: none;
+  }
+  /* skills */
+  .skills-content .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tools {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .tools-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+  .soft-skill::after {
+    left: -7px;
+  }
+  .line.active-line {
+    height: 160px;
+  }
+  /* contact */
+  .contact-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .contact-form {
+    width: 55%;
+  }
+  .contact-info-container {
+    width: 40%;
+  }
+  .contact-info {
+    padding-top: 0;
   }
 }

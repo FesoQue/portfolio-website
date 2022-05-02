@@ -7,7 +7,7 @@ import JAVASCRIPT_ICON from '../assets/javascript.svg';
 import GIT_ICON from '../assets/git.svg';
 import REACT_ICON from '../assets/react.svg';
 import NEXT_ICON from '../assets/nextjs.svg';
-import BOOTSTRAP_ICON from '../assets/bootstrap.svg';
+import BOOTSTRAP_ICON from '../assets/bootstrap.png';
 import FIREBASE_ICON from '../assets/firebase.svg';
 import GSAP_ICON from '../assets/gsap.svg';
 import VSCODE_ICON from '../assets/vscode.svg';
@@ -19,10 +19,12 @@ import NPM_ICON from '../assets/npm.svg';
 import PHOTOSHOP_ICON from '../assets/photoshop.svg';
 
 const Skills = () => {
-  const circle = useRef();
+  const mainCircle = useRef();
+  const line = useRef();
 
   const [option, setOption] = useState('skills');
   const [stack, setStack] = useState('html');
+  const [width, setWidth] = useState(window.innerWidth);
 
   const setActiveClass = (arg) => {
     switch (arg) {
@@ -73,16 +75,12 @@ const Skills = () => {
     }
   };
 
-  const handleRotation = (e) => {
-    // const line = e.currentTarget.children[0];
-    // line.style.height = '130px';
-    // line.style.transform = 'rotate(0deg)';
-    // skillEle.current.innerText = e.currentTarget.dataset.name;
-    console.log(e.currentTarget.style.transform);
+  const checkSize = () => {
+    setWidth(window.innerWidth);
   };
 
   useEffect(() => {
-    const degreeElement = circle.current.children[0].children;
+    const degreeElement = mainCircle.current.children[0].children;
     const degArr = Array.from(degreeElement);
 
     degArr.forEach((element, index) => {
@@ -99,6 +97,34 @@ const Skills = () => {
     //   yoyo: true,
     // });
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', checkSize);
+    const degreeElement = mainCircle.current.children[0].children;
+    const degArr = Array.from(degreeElement);
+
+    if (width > 1000) {
+      mainCircle.current.style.width = `450px`;
+      mainCircle.current.style.height = `450px`;
+
+      degArr.forEach((element, i) => {
+        element.style.left = '210px';
+        element.style.transformOrigin = '50% 220px';
+      });
+    } else {
+      mainCircle.current.style.width = `300px`;
+      mainCircle.current.style.height = `300px`;
+
+      degArr.forEach((element, i) => {
+        element.style.left = '125px';
+        element.style.transformOrigin = '50% 145px';
+      });
+    }
+
+    return () => {
+      window.removeEventListener('resize', checkSize);
+    };
+  }, [width]);
 
   return (
     <section className='section skills-section'>
@@ -137,7 +163,7 @@ const Skills = () => {
             {/* technical */}
             <div className='technical-skills'>
               <h3>Tech Stacks:</h3>
-              <div id='main-circle' ref={circle}>
+              <div id='main-circle' ref={mainCircle}>
                 <div className='degree-wrapper'>
                   <div className='degree' onClick={() => setActiveLine('html')}>
                     <span
@@ -230,68 +256,58 @@ const Skills = () => {
               </div>
             </div>
             {/* tools */}
-            <div className='tools'>
-              <h3>Tools: </h3>
-              <div className='tools-wrapper'>
-                <div className='tool'>
-                  <img src={VSCODE_ICON} alt='vscode' />
-                </div>
-
-                <div className='tool'>
-                  <img src={CHROME_ICON} alt='chrome' />
-                </div>
-
-                <div className='tool'>
-                  <img src={GIT_ICON} alt='git' />
-                </div>
-
-                <div className='tool'>
-                  <img src={CODEPEN_ICON} alt='codepen' />
-                </div>
-
-                <div className='tool'>
-                  <img src={PHOTOSHOP_ICON} alt='photoshop' />
-                </div>
-
-                <div className='tool'>
-                  <img src={ADOBE_ICON} alt='adobe-xd' />
-                </div>
-
-                <div className='tool'>
-                  <img src={CODESANDBOX_ICON} alt='codesandbox' />
-                </div>
-
-                <div className='tool'>
-                  <img src={NPM_ICON} alt='npm' />
+            <div className='flex'>
+              <div className='tools'>
+                <h3>Tools: </h3>
+                <div className='tools-wrapper'>
+                  <div className='tool'>
+                    <img src={VSCODE_ICON} alt='vscode' />
+                  </div>
+                  <div className='tool'>
+                    <img src={CHROME_ICON} alt='chrome' />
+                  </div>
+                  <div className='tool'>
+                    <img src={GIT_ICON} alt='git' />
+                  </div>
+                  <div className='tool'>
+                    <img src={CODEPEN_ICON} alt='codepen' />
+                  </div>
+                  <div className='tool'>
+                    <img src={PHOTOSHOP_ICON} alt='photoshop' />
+                  </div>
+                  <div className='tool'>
+                    <img src={ADOBE_ICON} alt='adobe-xd' />
+                  </div>
+                  <div className='tool'>
+                    <img src={CODESANDBOX_ICON} alt='codesandbox' />
+                  </div>
+                  <div className='tool'>
+                    <img src={NPM_ICON} alt='npm' />
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* non technical */}
-            <div className='non-technical-skills'>
-              <h3>Soft Skills:</h3>
-              <div className='soft-skills-wrapper'>
-                <div className='soft-skill'>
-                  <p>Good Communication Skills</p>
-                </div>
-
-                <div className='soft-skill'>
-                  <p>Critical Thinking & Problem Solving</p>
-                </div>
-
-                <div className='soft-skill'>
-                  <p>Team Work & Collaboration</p>
-                </div>
-
-                <div className='soft-skill'>
-                  <p>Professionalism & Strong Work Ethics</p>
-                </div>
-
-                <div className='soft-skill'>
-                  <p>Flexibility & Adaptability</p>
-                </div>
-
-                <div className='soft-skill'>
-                  <p>Time Management</p>
+              {/* non technical */}
+              <div className='non-technical-skills'>
+                <h3>Soft Skills:</h3>
+                <div className='soft-skills-wrapper'>
+                  <div className='soft-skill'>
+                    <p>Good Communication Skills</p>
+                  </div>
+                  <div className='soft-skill'>
+                    <p>Critical Thinking & Problem Solving</p>
+                  </div>
+                  <div className='soft-skill'>
+                    <p>Team Work & Collaboration</p>
+                  </div>
+                  <div className='soft-skill'>
+                    <p>Professionalism & Strong Work Ethics</p>
+                  </div>
+                  <div className='soft-skill'>
+                    <p>Flexibility & Adaptability</p>
+                  </div>
+                  <div className='soft-skill'>
+                    <p>Time Management Skills</p>
+                  </div>
                 </div>
               </div>
             </div>
