@@ -20,7 +20,7 @@ import PHOTOSHOP_ICON from '../assets/photoshop.svg';
 
 const Skills = () => {
   const mainCircle = useRef();
-  const line = useRef();
+  const lang = useRef();
 
   const [option, setOption] = useState('skills');
   const [stack, setStack] = useState('html');
@@ -60,8 +60,8 @@ const Skills = () => {
       case 'git':
         setStack('git');
         break;
-      case 'next':
-        setStack('next');
+      case 'nextJs':
+        setStack('nextJs');
         break;
       case 'gsap':
         setStack('gsap');
@@ -219,16 +219,24 @@ const Skills = () => {
                     <img src={GIT_ICON} alt='git' />
                   </div>
 
-                  <div className='degree' onClick={() => setActiveLine('next')}>
+                  <div
+                    className='degree'
+                    onClick={() => setActiveLine('nextJs')}
+                  >
                     <span
                       className={`line ${
-                        stack === 'next' ? 'active-line' : ''
+                        stack === 'nextJs' ? 'active-line' : ''
                       }`}
                     ></span>
                     <img src={NEXT_ICON} alt='nextjs' />
                   </div>
 
-                  <div className='degree' onClick={() => setActiveLine('gsap')}>
+                  <div
+                    className='degree'
+                    onClick={() => {
+                      setActiveLine('gsap');
+                    }}
+                  >
                     <span
                       className={`line ${
                         stack === 'gsap' ? 'active-line' : ''
@@ -250,8 +258,8 @@ const Skills = () => {
                   </div>
                 </div>
 
-                <div id='center-label'>
-                  <p>{stack}</p>
+                <div className='center-label'>
+                  <p className='stack-name'>{stack}</p>
                 </div>
               </div>
             </div>

@@ -34,47 +34,55 @@ const About = () => {
         <div className='section-title'>
           <h1>About Myself</h1>
         </div>
-        <div className='bio-length'>
-          <p>Adjust Bio Length:</p>
-          <div className='dots-wrapper'>
-            <div
-              className={`${
-                bioLength === 'shortest' ? 'dot dot-active' : 'dot'
-              }`}
-              onClick={() => setActiveClass('shortest')}
-            ></div>
-            <div
-              className={`${
-                bioLength === 'shorter' ? 'dot dot-active' : 'dot'
-              }`}
-              onClick={() => setActiveClass('shorter')}
-            ></div>
-            <div
-              className={`${bioLength === 'short' ? 'dot dot-active' : 'dot'}`}
-              onClick={() => setActiveClass('short')}
-            ></div>
-            <div
-              className={`${bioLength === 'long' ? 'dot dot-active' : 'dot'}`}
-              onClick={() => setActiveClass('long')}
-            ></div>
-            <div
-              className={`${bioLength === 'longer' ? 'dot dot-active' : 'dot'}`}
-              onClick={() => setActiveClass('longer')}
-            ></div>
-            <div
-              className={`${
-                bioLength === 'longest' ? 'dot dot-active' : 'dot'
-              }`}
-              onClick={() => setActiveClass('longest')}
-            ></div>
-          </div>
-          <div className='length-tags'>
-            <p>shortest</p>
-            <p>Longest</p>
-          </div>
-        </div>
-        <div className='section-content-area'>
+        {/* img */}
+        <div className='about-wrapper'>
+          <div className='profile-img'></div>
           <div className='section-content'>
+            <div className='bio-length'>
+              <p>Adjust Bio Length:</p>
+              <div className='dots-wrapper'>
+                <div
+                  className={`${
+                    bioLength === 'shortest' ? 'dot dot-active' : 'dot'
+                  }`}
+                  onClick={() => setActiveClass('shortest')}
+                ></div>
+                <div
+                  className={`${
+                    bioLength === 'shorter' ? 'dot dot-active' : 'dot'
+                  }`}
+                  onClick={() => setActiveClass('shorter')}
+                ></div>
+                <div
+                  className={`${
+                    bioLength === 'short' ? 'dot dot-active' : 'dot'
+                  }`}
+                  onClick={() => setActiveClass('short')}
+                ></div>
+                <div
+                  className={`${
+                    bioLength === 'long' ? 'dot dot-active' : 'dot'
+                  }`}
+                  onClick={() => setActiveClass('long')}
+                ></div>
+                <div
+                  className={`${
+                    bioLength === 'longer' ? 'dot dot-active' : 'dot'
+                  }`}
+                  onClick={() => setActiveClass('longer')}
+                ></div>
+                <div
+                  className={`${
+                    bioLength === 'longest' ? 'dot dot-active' : 'dot'
+                  }`}
+                  onClick={() => setActiveClass('longest')}
+                ></div>
+              </div>
+              <div className='length-tags'>
+                <p>shortest</p>
+                <p>Longest</p>
+              </div>
+            </div>
             <div
               className={
                 bioLength === 'shortest' ? 'bio-text active-text' : 'bio-text'
@@ -113,7 +121,6 @@ const About = () => {
                 analytical sides of his mind. He was simply fascinated with it.
               </p>
             </div>
-
             <div
               className={
                 bioLength === 'short' ? 'bio-text active-text' : 'bio-text'
@@ -134,7 +141,6 @@ const About = () => {
                 whole new world of possibilities happened before his eyes.
               </p>
             </div>
-
             <div
               className={
                 bioLength === 'long' ? 'bio-text active-text' : 'bio-text'
@@ -159,7 +165,6 @@ const About = () => {
                 entertainment blog website.
               </p>
             </div>
-
             <div
               className={
                 bioLength === 'longer' ? 'bio-text active-text' : 'bio-text'
@@ -188,14 +193,12 @@ const About = () => {
                 to academics workload. He reginited the flames and passion for
                 web development after he graduated.
               </p>
-
               <p>
                 As a person, he's an ambitious, goal driven & detail oriented
                 frontend developer looking to leverage my working knowledge of
                 frontend technologies for a role in an established IT company.
               </p>
             </div>
-
             <div
               className={
                 bioLength === 'longest' ? 'bio-text active-text' : 'bio-text'
@@ -227,7 +230,6 @@ const About = () => {
                 web development after he graduated, and he have been learning
                 and creating ever since then
               </p>
-
               <p>
                 As a person, he's an ambitious, goal driven & detail oriented
                 frontend developer looking to leverage my working knowledge of
