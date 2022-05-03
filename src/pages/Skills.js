@@ -17,6 +17,8 @@ import CODESANDBOX_ICON from '../assets/code-sandbox.svg';
 import ADOBE_ICON from '../assets/adobe-xd.svg';
 import NPM_ICON from '../assets/npm.svg';
 import PHOTOSHOP_ICON from '../assets/photoshop.svg';
+import { motion } from 'framer-motion';
+import { animatePages, transition } from '../animation/animate';
 
 const Skills = () => {
   const mainCircle = useRef();
@@ -88,14 +90,6 @@ const Skills = () => {
       element.style.transformOrigin = '50% 145px';
       element.style.transform = `rotate(${index * 40}deg)`;
     });
-
-    // gsap.to(circle.current, {
-    //   rotation: 1440,
-    //   ease: 'power1.in',
-    //   duration: 50,
-    //   repeat: -1,
-    //   yoyo: true,
-    // });
   }, []);
 
   useEffect(() => {
@@ -127,7 +121,14 @@ const Skills = () => {
   }, [width]);
 
   return (
-    <section className='section skills-section'>
+    <motion.section
+      initial='out'
+      animate='in'
+      exit='out'
+      variants={animatePages}
+      transition={transition}
+      className='section skills-section'
+    >
       <div className='section-contents-wrapper container'>
         <div className='section-title'>
           <h1>Skills & Services</h1>
@@ -333,7 +334,7 @@ const Skills = () => {
           </section>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

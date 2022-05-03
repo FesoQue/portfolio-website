@@ -1,10 +1,19 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
+import { animatePages, transition } from '../animation/animate';
 
 const Projects = () => {
   return (
-    <section className='section project-section'>
+    <motion.section
+      initial='out'
+      animate='in'
+      exit='out'
+      variants={animatePages}
+      transition={transition}
+      className='section project-section'
+    >
       <div className='section-contents-wrapper container'>
         <div className='section-title'>
           <h1>My Works</h1>
@@ -13,7 +22,7 @@ const Projects = () => {
           <div className='project-cards'>
             <div className='p-card p-card-1'>
               <div className='p-card-content'>
-                <h4>Wishopa Ecommerce Website</h4>
+                <h4>Wishopa Ecommerce</h4>
 
                 <div className='lang-tags'>
                   <button className='lang-tag react-tag'>react</button>
@@ -25,10 +34,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='https://wishopa.netlify.app' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -42,10 +51,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='https://coloree.netlify.app' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -53,7 +62,7 @@ const Projects = () => {
             </div>
             <div className='p-card p-card-3'>
               <div className='p-card-content'>
-                <h4>Live Crypto Prices Tracker</h4>
+                <h4>Crypto Prices Tracker</h4>
                 <div className='lang-tags'>
                   <button className='lang-tag react-tag'>react</button>
                   <button className='lang-tag context-tag chartjs-tag'>
@@ -64,10 +73,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='https://coinsverse.netlify.app' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -75,17 +84,17 @@ const Projects = () => {
             </div>
             <div className='p-card p-card-4'>
               <div className='p-card-content'>
-                <h4>Sneakers Storefront Landing Page</h4>
+                <h4>Sneakers Landing Page</h4>
                 <div className='lang-tags'>
                   <button className='lang-tag react-tag'>react</button>
                   <button className='lang-tag context-tag'>context</button>
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='https://sneakerz.netlify.app' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -93,7 +102,7 @@ const Projects = () => {
             </div>
             <div className='p-card p-card-5'>
               <div className='p-card-content'>
-                <h4>Bookmark Manager Landing Page</h4>
+                <h4>Bookmark Landing Page</h4>
                 <div className='lang-tags'>
                   <button className='lang-tag html-tag'>html</button>
                   <button className='lang-tag css-tag'>css</button>
@@ -101,10 +110,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='https://.netlify.app' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -120,10 +129,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='https://.netlify.app' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -131,16 +140,16 @@ const Projects = () => {
             </div>
             <div className='p-card p-card-7'>
               <div className='p-card-content'>
-                <h4>Interactive Pricing Component</h4>
+                <h4> Pricing Component</h4>
                 <div className='lang-tags'>
                   <button className='lang-tag bootstrap-tag'> bootstrap</button>
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='https://.netlify.app' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -148,16 +157,16 @@ const Projects = () => {
             </div>
             <div className='p-card p-card-8'>
               <div className='p-card-content'>
-                <h4>(Devpadi) Github User Finder</h4>
+                <h4>Github User Finder</h4>
                 <div className='lang-tags'>
                   <button className='lang-tag react-tag'>react</button>
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='https://.netlify.app' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -173,10 +182,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='tpps://.netlify.app' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -192,10 +201,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='' className='github'>
+                  <a href='https://github.com/FesoQue/' className='github'>
                     <AiFillGithub />
                   </a>
-                  <a href='' className='github'>
+                  <a href='https://.netlify.app' className='github'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -204,7 +213,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

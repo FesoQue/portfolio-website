@@ -3,10 +3,12 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { FiInstagram } from 'react-icons/fi';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
-import PHONE_ICON from '../assets/phone.png';
-import MSG_ICON from '../assets/new-post.png';
-import LOCATION_ICON from '../assets/map-marker.png';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
+import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BiPhoneCall } from 'react-icons/bi';
+import { animatePages, transition } from '../animation/animate';
+import { motion } from 'framer-motion';
 
 const validateEmail = (email) => {
   const re =
@@ -29,12 +31,12 @@ const Contact = () => {
     } else if (!email && !validateEmail(email)) {
     } else if (!message) {
     } else {
-      // emailjs.sendForm(
-      //   process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      //   process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      //   form.current,
-      //   process.env.REACT_APP_EMAILJS_KEY
-      // );
+      emailjs.sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_KEY
+      );
       setName('');
       setEmail('');
       setMessage('');
@@ -49,11 +51,18 @@ const Contact = () => {
   }, [isSubmit]);
 
   return (
-    <section className='section contact-section'>
+    <motion.section
+      initial='out'
+      animate='in'
+      exit='out'
+      variants={animatePages}
+      transition={transition}
+      className='section contact-section'
+    >
       <div className='section-contents-wrapper container'>
         <div className='section-title'>
           <h1>Contact Me</h1>
-          <p>I'm vailable for freelance/job opportunities</p>
+          <p>I'm available for freelance/job opportunities</p>
         </div>
         <div className='contact-content'>
           <form
@@ -102,15 +111,22 @@ const Contact = () => {
           <div className='contact-info-container'>
             <div className='contact-info'>
               <div>
-                <img src={LOCATION_ICON} alt='location' />
+                <span>
+                  <HiOutlineLocationMarker />
+                </span>
+
                 <p>Ogun State, Nigeria.</p>
               </div>
               <div>
-                <img src={PHONE_ICON} alt='tel' />
+                <span>
+                  <BiPhoneCall />
+                </span>
                 <p>(+234)8168127242</p>
               </div>
               <div>
-                <img src={MSG_ICON} alt='email' />
+                <span>
+                  <HiOutlineMail />
+                </span>
                 <p>Adefesoq@gmail.com</p>
               </div>
             </div>
@@ -133,7 +149,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

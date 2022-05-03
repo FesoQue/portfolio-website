@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
+import { animatePages, transition } from '../animation/animate';
 
 const About = () => {
   const [bioLength, setBioLength] = useState('longest');
@@ -29,7 +31,14 @@ const About = () => {
     }
   };
   return (
-    <section className='section about-section'>
+    <motion.section
+      initial='out'
+      animate='in'
+      exit='out'
+      variants={animatePages}
+      transition={transition}
+      className='section about-section'
+    >
       <div className='section-contents-wrapper container'>
         <div className='section-title'>
           <h1>About Myself</h1>
@@ -243,7 +252,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

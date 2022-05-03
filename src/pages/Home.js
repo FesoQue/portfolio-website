@@ -4,6 +4,8 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { FiInstagram } from 'react-icons/fi';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
+import { motion } from 'framer-motion';
+import { animatePages, transition } from '../animation/animate';
 
 const Home = () => {
   const textsRef = useRef();
@@ -55,7 +57,14 @@ const Home = () => {
   }, []);
 
   return (
-    <section className='homepage'>
+    <motion.section
+      initial='out'
+      animate='in'
+      exit='out'
+      variants={animatePages}
+      transition={transition}
+      className='homepage'
+    >
       <div className='intro container'>
         <div className='intro-text'>
           <h1>Hi,</h1>
@@ -107,7 +116,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
