@@ -139,6 +139,12 @@ main {
   display: flex;
   align-items: center;
   background-color: var(--gray7);
+  transform: translateY(0);
+  transition: var(--transition);
+}
+.header-row-1.hide,
+.header-row-2.hide {
+  transform: translateY(-100%);
 }
 .row-1-wrapper {
   display: flex;
