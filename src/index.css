@@ -832,13 +832,15 @@ form {
 .form-group {
   display: flex;
   flex-direction: column;
-  row-gap: 0.5rem;
 }
 .form-group,
 .form-group input,
 .form-group textarea,
 .form-btn {
   width: 100%;
+}
+.form-group input {
+  margin-bottom: 0.5rem;
 }
 .form-group input,
 .form-group textarea {
@@ -858,7 +860,7 @@ textarea {
   font-size: 18px;
   padding: 1rem 0;
   font-weight: 600;
-  margin-top: 0.6rem;
+  margin-top: 2rem;
   text-transform: uppercase;
   background: var(--green-grad);
   border-radius: var(--radius);
