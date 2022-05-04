@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { animatePages, transition } from '../animation/animate';
 
 const About = () => {
-  const [bioLength, setBioLength] = useState('longest');
+  const [bioLength, setBioLength] = useState('longer');
 
   const setActiveClass = (arg) => {
     switch (arg) {

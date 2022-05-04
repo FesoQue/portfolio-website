@@ -411,7 +411,7 @@ h1.char {
 .profile-img {
   aspect-ratio: 4/3;
   margin-bottom: 4rem;
-  background-color: red;
+  background-color: var(--green);
 }
 .bio-length {
   margin-bottom: 1.3rem;
@@ -906,6 +906,27 @@ textarea {
 .social-info div > a:hover {
   background: var(--green-grad);
   color: var(--gray8);
+}
+
+/* ERROR */
+.err-content {
+  height: 80vh;
+}
+.err-img-wrap img {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+.err-content a {
+  display: inline-block;
+  min-width: 12ch;
+  padding: 0.6rem 0;
+  text-align: center;
+  color: var(--gray8);
+  background: var(--green-grad);
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 @media screen and (min-width: 630px) {
   .intro-text h1 {
