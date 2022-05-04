@@ -756,7 +756,7 @@ h1.char {
   box-shadow: 0 0px 5px var(--green-light);
 }
 .p-card:hover .p-card-content {
-  top: 50%;
+  top: 33%;
 }
 .p-card:hover::after {
   background: linear-gradient(transparent 4%, rgba(0, 0, 0, 0.8) 28%);
@@ -771,6 +771,7 @@ h1.char {
   min-width: 10ch;
   padding: 0.3rem;
   margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
   font-size: 10px;
   text-transform: uppercase;
   color: var(--gray8);
@@ -779,12 +780,15 @@ h1.char {
 }
 .html-tag {
   background-color: #e42750;
+  color: var(--text-color);
 }
 .css-tag {
   background-color: #0078f1;
+  color: var(--text-color);
 }
 .bootstrap-tag {
   background-color: #b182f7;
+  color: var(--text-color);
 }
 .react-tag {
   background-color: var(--cyan);
