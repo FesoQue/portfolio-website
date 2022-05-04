@@ -743,7 +743,7 @@ h1.char {
 }
 .p-card-content {
   position: absolute;
-  top: 88%;
+  top: 89%;
   padding: 0 0.5rem;
   transition: top 0.3s linear;
 }
@@ -756,7 +756,7 @@ h1.char {
   box-shadow: 0 0px 5px var(--green-light);
 }
 .p-card:hover .p-card-content {
-  top: 30%;
+  top: 50%;
 }
 .p-card:hover::after {
   background: linear-gradient(transparent 4%, rgba(0, 0, 0, 0.8) 28%);
@@ -765,13 +765,12 @@ h1.char {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  column-gap: 0.3rem;
-  row-gap: 0.3rem;
   margin-bottom: 1rem;
 }
 .lang-tag {
   min-width: 10ch;
   padding: 0.3rem;
+  margin-right: 0.3rem;
   font-size: 10px;
   text-transform: uppercase;
   color: var(--gray8);
@@ -805,12 +804,14 @@ h1.char {
 }
 .project-links {
   display: flex;
-  column-gap: 1rem;
 }
 .project-links a {
   color: var(--text-color);
   font-size: 1.5rem;
   transition: var(--transition);
+}
+.github {
+  margin-right: 1rem;
 }
 .github:hover {
   color: var(--green-light);
