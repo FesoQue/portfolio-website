@@ -499,12 +499,6 @@ h1.char {
   position: relative;
 }
 .skills-content h3 {
-  /* background: linear-gradient(to right, var(--green-light), var(--cyan));
-  background-clip: text;
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: var(--text-color);
   margin-bottom: 1rem;
 }
@@ -541,7 +535,7 @@ h1.char {
   border-radius: 50%;
   text-transform: uppercase;
   z-index: 90;
-  box-shadow: 0 0px 5px var(--gray3);
+  box-shadow: 0 0px 5px var(--green-light);
   overflow: hidden;
 }
 .stack-name {
@@ -550,7 +544,6 @@ h1.char {
   font-size: 11px;
   margin-bottom: 0 !important;
 }
-
 .degree {
   position: absolute;
   width: 40px;
@@ -560,6 +553,7 @@ h1.char {
   background-color: transparent;
   cursor: pointer;
   z-index: 9;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 .degree img {
   transition: transform 0.3s ease;
