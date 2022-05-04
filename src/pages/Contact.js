@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { GrFacebookOption } from 'react-icons/gr';
-import { FiInstagram } from 'react-icons/fi';
+import { AiFillGithub } from 'react-icons/ai';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import emailjs from '@emailjs/browser';
@@ -28,8 +28,11 @@ const Contact = () => {
     e.preventDefault();
 
     if (!name) {
+      setIsSubmit(true);
     } else if (!email && !validateEmail(email)) {
+      setIsSubmit(true);
     } else if (!message) {
+      setIsSubmit(true);
     } else {
       emailjs.sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -37,11 +40,9 @@ const Contact = () => {
         form.current,
         process.env.REACT_APP_EMAILJS_KEY
       );
-      setName('');
-      setEmail('');
-      setMessage('');
+      setIsSubmit(false);
+      e.target.reset();
     }
-    setIsSubmit(true);
   };
 
   useEffect(() => {
@@ -79,7 +80,7 @@ const Contact = () => {
                 placeholder='name'
                 onChange={(e) => setName(e.target.value)}
                 style={{
-                  boxShadow: isSubmit && name === '' ? '0 0 0 2px red' : '',
+                  boxShadow: isSubmit && name === '' ? '0 0 0 2px red' : 'none',
                 }}
               />
               <input
@@ -88,7 +89,8 @@ const Contact = () => {
                 placeholder='email'
                 onChange={(e) => setEmail(e.target.value)}
                 style={{
-                  boxShadow: isSubmit && email === '' ? '0 0 0 2px red' : '',
+                  boxShadow:
+                    isSubmit && email === '' ? '0 0 0 2px red' : 'none',
                 }}
               />
               <textarea
@@ -98,7 +100,8 @@ const Contact = () => {
                 placeholder='message'
                 rows='10'
                 style={{
-                  boxShadow: isSubmit && message === '' ? '0 0 0 2px red' : '',
+                  boxShadow:
+                    isSubmit && message === '' ? '0 0 0 2px red' : 'none',
                 }}
               ></textarea>
               <button type='submit' className='form-btn'>
@@ -135,11 +138,11 @@ const Contact = () => {
                 <a href='#'>
                   <GrFacebookOption />
                 </a>
-                <a href='#'>
-                  <FiInstagram />
-                </a>
-                <a href='#'>
+                <a href='https://twitter.com/pengpixel'>
                   <AiOutlineTwitter />
+                </a>
+                <a href='https://github.com/FesoQue'>
+                  <AiFillGithub />
                 </a>
                 <a href='#'>
                   <AiFillLinkedin />

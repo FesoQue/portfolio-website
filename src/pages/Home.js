@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { GrFacebookOption } from 'react-icons/gr';
-import { FiInstagram } from 'react-icons/fi';
+import { AiFillGithub } from 'react-icons/ai';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { motion } from 'framer-motion';
@@ -101,14 +101,14 @@ const Home = () => {
         <div className='social-wrapper'>
           <p className='connect-text'>Let's connect</p>
           <div className='social'>
-            <a href='' className='fb'>
+            <a href='https://github.com/FesoQue' className='fb'>
               <GrFacebookOption />
             </a>
-            <a href='' className='ig'>
-              <FiInstagram />
-            </a>
-            <a href='' className='twitter'>
+            <a href='https://twitter.com/pengpixel' className='twitter'>
               <AiOutlineTwitter />
+            </a>
+            <a href='https://github.com/FesoQue' className='github'>
+              <AiFillGithub />
             </a>
             <a href='' className='linkedin'>
               <AiFillLinkedin />

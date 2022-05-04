@@ -19,7 +19,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 const Header = () => {
   // const [isActive, setIsActive] = useState(false);
 
-  let name = 'Q.Dus';
+  let name = 'Q.';
   return (
     <header className='header'>
       <DesktopNav />

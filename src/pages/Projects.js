@@ -34,7 +34,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='https://github.com/FesoQue/' className='github'>
+                  <a
+                    href='https://github.com/FesoQue/Wishopa-React-Ecommerce-Website'
+                    className='github'
+                  >
                     <AiFillGithub />
                   </a>
                   <a href='https://wishopa.netlify.app' className='ext-link'>
@@ -51,7 +54,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='https://github.com/FesoQue/' className='github'>
+                  <a
+                    href='https://github.com/FesoQue/gradeo-gradient-generator'
+                    className='github'
+                  >
                     <AiFillGithub />
                   </a>
                   <a href='https://coloree.netlify.app' className='ext-link'>
@@ -73,7 +79,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='https://github.com/FesoQue/' className='github'>
+                  <a
+                    href='https://github.com/FesoQue/Live-CryptoCurrency-Tracker-Project'
+                    className='github'
+                  >
                     <AiFillGithub />
                   </a>
                   <a href='https://coinsverse.netlify.app' className='ext-link'>
@@ -91,7 +100,10 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='https://github.com/FesoQue/' className='github'>
+                  <a
+                    href='https://github.com/FesoQue/Sneakers-Ecommerce-Product-Page-With-Paystack-Checkout-and-Dark-Mode-With-localStorage'
+                    className='github'
+                  >
                     <AiFillGithub />
                   </a>
                   <a href='https://sneakerz.netlify.app' className='ext-link'>
@@ -110,10 +122,16 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='https://github.com/FesoQue/' className='github'>
+                  <a
+                    href='https://github.com/FesoQue/Bookmark-Landing-Page-With-Tabs-And-Email-Validation'
+                    className='github'
+                  >
                     <AiFillGithub />
                   </a>
-                  <a href='https://.netlify.app' className='ext-link'>
+                  <a
+                    href='https://bookmarknow.netlify.app/'
+                    className='ext-link'
+                  >
                     <FiExternalLink />
                   </a>
                 </div>
@@ -146,10 +164,16 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='https://github.com/FesoQue/' className='github'>
+                  <a
+                    href='https://github.com/FesoQue/Interactive-pricing-component'
+                    className='github'
+                  >
                     <AiFillGithub />
                   </a>
-                  <a href='https://.netlify.app' className='ext-link'>
+                  <a
+                    href='https://price-component.netlify.app/'
+                    className='ext-link'
+                  >
                     <FiExternalLink />
                   </a>
                 </div>
@@ -163,10 +187,13 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='https://github.com/FesoQue/' className='github'>
+                  <a
+                    href='https://github.com/FesoQue/Github-Dev-Finder'
+                    className='github'
+                  >
                     <AiFillGithub />
                   </a>
-                  <a href='https://.netlify.app' className='ext-link'>
+                  <a href='https://devpadi.netlify.app/' className='ext-link'>
                     <FiExternalLink />
                   </a>
                 </div>
@@ -182,10 +209,16 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='https://github.com/FesoQue/' className='github'>
+                  <a
+                    href='https://github.com/FesoQue/Room-Homepage-Master'
+                    className='github'
+                  >
                     <AiFillGithub />
                   </a>
-                  <a href='tpps://.netlify.app' className='ext-link'>
+                  <a
+                    href='https://roomhomepage-master.netlify.app/'
+                    className='ext-link'
+                  >
                     <FiExternalLink />
                   </a>
                 </div>
@@ -201,10 +234,13 @@ const Projects = () => {
                 </div>
 
                 <div className='project-links'>
-                  <a href='https://github.com/FesoQue/' className='github'>
+                  <a
+                    href='https://github.com/FesoQue/Social-media-dashboard-with-theme-switcher'
+                    className='github'
+                  >
                     <AiFillGithub />
                   </a>
-                  <a href='https://.netlify.app' className='github'>
+                  <a href='https://social-md.netlify.app/' className='github'>
                     <FiExternalLink />
                   </a>
                 </div>
