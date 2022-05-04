@@ -145,12 +145,8 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.header-row-2 {
-  transform: translateX(100%);
-  transition: transform 0.3s linear;
-}
-.header-row-2.show {
-  transform: translateX(0);
+.row-2-wrapper {
+  height: 100%;
 }
 .version {
   font-weight: 600;
@@ -158,20 +154,23 @@ main {
 }
 .nav-menu-list {
   width: 92vw;
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .menu-item {
   position: relative;
   width: calc(92vw / 5);
-  font-size: 23px;
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
   -webkit-tap-highlight-color: transparent;
 }
 .menu-item svg {
   color: #a7a7a7;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 .label {
   position: absolute;
@@ -180,12 +179,12 @@ main {
   padding: 5px;
   display: grid;
   place-items: center;
-  bottom: -50px;
+  bottom: -28px;
   font-size: 12px;
   font-weight: 500;
   color: #fff;
   background-color: var(--green);
-  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
   transform: scale(0);
   transition: transform 0.3s ease-in-out;
 }
@@ -199,14 +198,13 @@ main {
   background-color: #00a994;
 }
 .three {
-  background-color: #ff495f;
   background-color: #00677f;
 }
 .four {
   background-color: #7745ff;
 }
 .five {
-  background-color: #e13eff;
+  background-color: #ff495f;
 }
 
 /* ===================
@@ -698,9 +696,8 @@ h1.char {
   box-shadow: 0 0 0 2px var(--gray7);
   transition: 0.3s linear;
   overflow: hidden;
-  /* z-index: 90; */
+  z-index: 10;
   cursor: pointer;
-  outline: 1px solid red;
 }
 .p-card-1 {
   background-image: url('./assets/wishopa.jpg');
@@ -736,6 +733,7 @@ h1.char {
   content: '';
   position: absolute;
   top: 0;
+  outline: 1px solid red;
   left: 0;
   width: 100%;
   height: 100%;
@@ -747,7 +745,6 @@ h1.char {
   position: absolute;
   top: 88%;
   padding: 0 0.5rem;
-  will-change: transform;
   transition: top 0.3s linear;
 }
 .p-card-content h4 {
@@ -759,9 +756,6 @@ h1.char {
   box-shadow: 0 0px 5px var(--green-light);
 }
 .p-card:hover .p-card-content {
-  top: 30%;
-}
-.p-card:hover::after .p-card-content {
   top: 30%;
 }
 .p-card:hover::after {
@@ -879,11 +873,12 @@ textarea {
 .contact-info span {
   color: var(--gray8);
   margin-right: 1rem;
+  padding: 0.3rem;
   background: var(--green-grad);
-  /* background-color: var(--gray7);
-  color: var(--text-color); */
-  padding: 0.5rem;
   border-radius: var(--radius);
+}
+.contact-info span > svg {
+  font-size: 1.3rem;
 }
 .contact-info div:last-child {
   margin-bottom: 0;
@@ -906,14 +901,17 @@ textarea {
   color: white;
   transition: 0.3s ease-in-out;
 }
+.social-info svg {
+  font-size: 1.3rem;
+}
 .social-info div > a:hover {
   background: var(--green-grad);
   color: var(--gray8);
 }
 @media screen and (min-width: 630px) {
-  .label {
+  /* .label {
     bottom: -53px;
-  }
+  } */
   .intro-text h1 {
     font-size: 3rem;
   }
@@ -970,6 +968,7 @@ textarea {
     width: 100%;
     position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
   }

@@ -54,12 +54,10 @@ const Header = () => {
         <nav className='header-row-2 show'>
           <div className='row-2-wrapper container'>
             <div className='nav-menu-list'>
-              <div>
-                <NavLink to='/' className='menu-item'>
-                  <RiHome5Line />
-                  <span className='label one'>HOME</span>
-                </NavLink>
-              </div>
+              <NavLink to='/' className='menu-item'>
+                <RiHome5Line />
+                <span className='label one'>HOME</span>
+              </NavLink>
               <NavLink to='/about' className='menu-item'>
                 <AiOutlineUser />
                 <span className='label two'>ABOUT</span>
