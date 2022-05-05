@@ -4,6 +4,7 @@ import { AiOutlineUser } from 'react-icons/ai';
 import { VscTools } from 'react-icons/vsc';
 import { RiCodeSSlashFill } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
+import { FiDownload } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 
 const DesktopNav = () => {
@@ -85,7 +86,14 @@ const DesktopNav = () => {
         </div>
         {/* row3 */}
         <div className='dsk-nav-row dsk-nav-row3'>
-          <p className='version'>v1.0</p>
+          <div className='dsk-resume'>
+            <a href='' className='dsk-download-resume'>
+              <span>
+                <FiDownload />
+              </span>
+              <span className='tooltip'>resume</span>
+            </a>
+          </div>
         </div>
       </div>
     </aside>

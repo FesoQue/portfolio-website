@@ -1033,6 +1033,27 @@ textarea {
     color: var(--gray4);
     display: none;
   }
+  .dsk-download-resume {
+    position: relative;
+    font-size: 22px;
+    color: var(--green-light);
+  }
+  .tooltip {
+    position: absolute;
+    top: -30px;
+    font-size: 14px;
+    color: var(--gray9);
+    padding: 0.3rem;
+    background: var(--green-grad);
+    border-radius: var(--radius);
+    font-weight: 500;
+    z-index: 5;
+    visibility: hidden;
+    transition: var(--transition);
+  }
+  .dsk-download-resume:hover .tooltip {
+    visibility: visible;
+  }
   /* mobile */
   .mobile-header {
     display: none;
