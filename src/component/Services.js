@@ -63,7 +63,7 @@ const Services = () => {
         <p>
           Even after your project is completed, i provide continous support wich
           may includes fixes & update, development of additional functionality &
-          features that will make your product reac its full potentials.
+          features that will make your product reach its full potentials.
         </p>
       </article>
     </div>

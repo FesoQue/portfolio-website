@@ -4,6 +4,7 @@ import { AiOutlineUser } from 'react-icons/ai';
 import { VscTools } from 'react-icons/vsc';
 import { RiCodeSSlashFill } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
+import { FiDownload } from 'react-icons/fi';
 import { Link, NavLink } from 'react-router-dom';
 
 const MobileNav = () => {
@@ -27,7 +28,7 @@ const MobileNav = () => {
 
   return (
     <div className='mobile-header'>
-      <nav className={`header-row-1 ${visible ? '' : 'hide'}`}>
+      <nav className='header-row-1'>
         <div className='row-1-wrapper container'>
           <div className='logo'>
             <Link to='/'>
@@ -35,7 +36,15 @@ const MobileNav = () => {
             </Link>
           </div>
 
-          <p className='version'>v1.0</p>
+          {/* <p className='version'>v1.0</p> */}
+          <div className='resume'>
+            <a href='' className='download-resume'>
+              <span>
+                <FiDownload />
+              </span>
+              resume
+            </a>
+          </div>
         </div>
       </nav>
       <nav className={`header-row-2 ${visible ? '' : 'hide'}`}>

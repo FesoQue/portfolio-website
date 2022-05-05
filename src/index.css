@@ -139,12 +139,15 @@ main {
   display: flex;
   align-items: center;
   background-color: var(--gray7);
-  transform: translateY(0);
-  transition: var(--transition);
+  opacity: 1;
+  transition: 0.2s linear;
 }
-.header-row-1.hide,
+
 .header-row-2.hide {
-  transform: translateY(-100%);
+  opacity: 0;
+}
+.hide .label {
+  display: none;
 }
 .row-1-wrapper {
   display: flex;
@@ -154,9 +157,19 @@ main {
 .row-2-wrapper {
   height: 100%;
 }
-.version {
-  font-weight: 600;
-  color: var(--green-light);
+.download-resume {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--gray9);
+  padding: 0.3rem 0.5rem;
+  background: var(--green-grad);
+  border-radius: var(--radius);
+  font-weight: 500;
+}
+.download-resume span {
+  margin-right: 5px;
+  font-size: 16px;
 }
 .nav-menu-list {
   width: 92vw;

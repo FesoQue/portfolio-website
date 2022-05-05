@@ -92,7 +92,12 @@ const About = () => {
                 <p>Longest</p>
               </div>
             </div>
-            <div
+            <motion.div
+              initial='out'
+              animate='in'
+              exit='out'
+              variants={animatePages}
+              transition={transition}
               className={
                 bioLength === 'shortest' ? 'bio-text active-text' : 'bio-text'
               }
@@ -110,7 +115,7 @@ const About = () => {
                 </span>
                 , I studied Electrical Electronics Engineering.
               </p>
-            </div>
+            </motion.div>
             <div
               className={
                 bioLength === 'shorter' ? 'bio-text active-text' : 'bio-text'
