@@ -142,7 +142,6 @@ main {
   opacity: 1;
   transition: 0.2s linear;
 }
-
 .header-row-2.hide {
   opacity: 0;
 }
@@ -156,6 +155,9 @@ main {
 }
 .row-2-wrapper {
   height: 100%;
+}
+.logo h2 {
+  font-size: 2rem;
 }
 .download-resume {
   display: flex;
