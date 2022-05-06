@@ -295,7 +295,7 @@ h1.char {
   overflow: hidden;
 }
 .multitext span {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--green-light);
   font-weight: 700;
   display: none;

@@ -11,13 +11,14 @@ import { AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
 const App = () => {
+  let location = useLocation();
   const loadingRef = useRef();
 
   const preloader = () => {
     loadingRef.current.style.display = 'none';
+    console.log(loadingRef.current);
   };
 
-  let location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
