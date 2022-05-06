@@ -434,11 +434,13 @@ h1.char {
   line-height: 1.4;
 }
 
-.profile-img {
+/* ! uncomment when you have a profile image */
+/* ? provide fallback for aspect ratio */
+/* .profile-img {
   aspect-ratio: 4/3;
   margin-bottom: 4rem;
   background-color: var(--green);
-}
+} */
 .bio-length {
   margin-bottom: 1.3rem;
 }
@@ -1111,11 +1113,15 @@ textarea {
   .section {
     margin-top: 5vh;
   }
-  .about-wrapper {
+  /* ! uncomment when you have a profile image */
+  /* .about-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-  }
+  } 
+   .about-wrapper > .section-content {
+    width: 47%;
+  } */
   .profile-img {
     width: 47%;
     margin-bottom: 0;
@@ -1123,9 +1129,7 @@ textarea {
   .bio-text p {
     width: 100%;
   }
-  .about-wrapper > .section-content {
-    width: 47%;
-  }
+
   /* skills */
   .skills-content .flex {
     display: flex;
