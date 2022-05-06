@@ -12,25 +12,16 @@ import { useLocation } from 'react-router-dom';
 
 const App = () => {
   let location = useLocation();
-  const loadingRef = useRef();
-
-  const preloader = () => {
-    loadingRef.current.style.display = 'none';
-    console.log(loadingRef.current);
-  };
+  // const loadingRef = useRef();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  useEffect(() => {
-    window.addEventListener('load', preloader);
-  }, []);
-
   return (
     <AnimatePresence>
       <main>
-        <div className='preloader' ref={loadingRef}></div>
+        {/* <div className='preloader' ref={loadingRef}></div> */}
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
