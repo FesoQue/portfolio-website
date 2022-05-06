@@ -960,7 +960,7 @@ textarea {
   font-weight: 700;
 }
 /* PRELOADER */
-.preloader {
+/* .preloader {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -978,7 +978,7 @@ textarea {
 .preloader.hide {
   visibility: hidden;
   z-index: -999;
-}
+} */
 @media screen and (min-width: 630px) {
   .intro-text h1 {
     font-size: 3rem;

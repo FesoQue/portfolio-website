@@ -12,20 +12,16 @@ import { useLocation } from 'react-router-dom';
 
 const App = () => {
   let location = useLocation();
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  useEffect(() => {
-    window.addEventListener('load', () => setLoading(false));
-  }, [location]);
-
   return (
     <AnimatePresence>
       <main>
-        <div className={`preloader ${loading ? '' : 'hide'}`}></div>
+        {/* <div className={`preloader ${loading ? '' : 'hide'}`}></div> */}
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
