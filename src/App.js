@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './component/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,16 +12,20 @@ import { useLocation } from 'react-router-dom';
 
 const App = () => {
   let location = useLocation();
-  // const loadingRef = useRef();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  useEffect(() => {
+    window.addEventListener('load', () => setLoading(false));
+  }, [location]);
+
   return (
     <AnimatePresence>
       <main>
-        {/* <div className='preloader' ref={loadingRef}></div> */}
+        <div className={`preloader ${loading ? '' : 'hide'}`}></div>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
