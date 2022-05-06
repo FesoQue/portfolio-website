@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Header from './component/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,14 +11,25 @@ import { AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
 const App = () => {
+  const loadingRef = useRef();
+
+  const preloader = () => {
+    loadingRef.current.style.display = 'none';
+  };
+
   let location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  useEffect(() => {
+    window.addEventListener('load', preloader);
+  }, []);
+
   return (
     <AnimatePresence>
       <main>
+        <div className='preloader' ref={loadingRef}></div>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />

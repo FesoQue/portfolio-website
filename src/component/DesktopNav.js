@@ -6,9 +6,9 @@ import { RiCodeSSlashFill } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiDownload } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
+import RESUME from '../assets/Adefeso_qudus_dev_resume.pdf';
 
 const DesktopNav = () => {
-  const logo = 'Q.';
   const [isClicked, setIsClicked] = useState(false);
 
   const handleMenu = () => {
@@ -36,8 +36,10 @@ const DesktopNav = () => {
       </div>
       <div className='desktop-nav'>
         {/* row1 */}
-        <div className='dsk-nav-row dsk-nav-row1'>
-          <h1>{logo}</h1>
+        <div className='dsk-nav-row dsk-nav-row1 logo'>
+          <h2>
+            Q<span>.</span>
+          </h2>
         </div>
         {/* row2 */}
         <div className='dsk-nav-row dsk-nav-row2'>
@@ -87,7 +89,11 @@ const DesktopNav = () => {
         {/* row3 */}
         <div className='dsk-nav-row dsk-nav-row3'>
           <div className='dsk-resume'>
-            <a href='' className='dsk-download-resume'>
+            <a
+              href={RESUME}
+              className='dsk-download-resume'
+              download='adefeso-Qudus-Resume'
+            >
               <span>
                 <FiDownload />
               </span>

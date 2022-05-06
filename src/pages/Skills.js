@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Services from '../component/Services';
-import { gsap } from 'gsap';
 import HTML_ICON from '../assets/html.svg';
 import CSS3_ICON from '../assets/css.svg';
 import JAVASCRIPT_ICON from '../assets/javascript.svg';
@@ -22,10 +21,9 @@ import { animatePages, transition } from '../animation/animate';
 
 const Skills = () => {
   const mainCircle = useRef();
-  const lang = useRef();
 
   const [option, setOption] = useState('skills');
-  const [stack, setStack] = useState('html');
+  const [stack, setStack] = useState('react');
   const [width, setWidth] = useState(window.innerWidth);
 
   const setActiveClass = (arg) => {
@@ -260,7 +258,9 @@ const Skills = () => {
                 </div>
 
                 <div className='center-label'>
-                  <p className='stack-name'>{stack}</p>
+                  <p className='stack-name'>
+                    <span>{stack}</span>
+                  </p>
                 </div>
               </div>
             </div>

@@ -135,16 +135,32 @@ const Contact = () => {
             </div>
             <div className='social-info'>
               <div className=''>
-                <a href='#'>
+                <a
+                  href='https://m.facebook.com/adefesoqudus.dmics'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <GrFacebookOption />
                 </a>
-                <a href='https://twitter.com/pengpixel'>
+                <a
+                  href='https://twitter.com/pengpixel'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <AiOutlineTwitter />
                 </a>
-                <a href='https://github.com/FesoQue'>
+                <a
+                  href='https://github.com/FesoQue'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <AiFillGithub />
                 </a>
-                <a href='#'>
+                <a
+                  href='https://www.linkedin.com/in/adefeso-qudus-a-ba8ba310a'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <AiFillLinkedin />
                 </a>
               </div>

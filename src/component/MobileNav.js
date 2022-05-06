@@ -6,9 +6,9 @@ import { RiCodeSSlashFill } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiDownload } from 'react-icons/fi';
 import { Link, NavLink } from 'react-router-dom';
+import RESUME from '../assets/Adefeso_qudus_dev_resume.pdf';
 
 const MobileNav = () => {
-  let name = 'Q.';
   /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
@@ -32,13 +32,19 @@ const MobileNav = () => {
         <div className='row-1-wrapper container'>
           <div className='logo'>
             <Link to='/'>
-              <h2>{name}</h2>
+              <h2>
+                Q<span>.</span>
+              </h2>
             </Link>
           </div>
 
           {/* <p className='version'>v1.0</p> */}
           <div className='resume'>
-            <a href='' className='download-resume'>
+            <a
+              href={RESUME}
+              className='download-resume'
+              download='adefeso-Qudus-Resume'
+            >
               <span>
                 <FiDownload />
               </span>

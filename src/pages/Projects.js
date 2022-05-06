@@ -38,7 +38,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/Wishopa-React-Ecommerce-Website'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -65,7 +65,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/gradeo-gradient-generator'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -97,7 +97,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/Live-CryptoCurrency-Tracker-Project'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -125,7 +125,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/Sneakers-Ecommerce-Product-Page-With-Paystack-Checkout-and-Dark-Mode-With-localStorage'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -154,7 +154,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/Bookmark-Landing-Page-With-Tabs-And-Email-Validation'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -183,7 +183,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -210,7 +210,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/Interactive-pricing-component'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -237,7 +237,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/Github-Dev-Finder'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -266,7 +266,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/Room-Homepage-Master'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -295,7 +295,7 @@ const Projects = () => {
                     href='https://github.com/FesoQue/Social-media-dashboard-with-theme-switcher'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <AiFillGithub />
                   </a>
@@ -303,7 +303,7 @@ const Projects = () => {
                     href='https://social-md.netlify.app/'
                     className='github'
                     target='_blank'
-                    rel='norefferer'
+                    rel='noreferrer'
                   >
                     <FiExternalLink />
                   </a>

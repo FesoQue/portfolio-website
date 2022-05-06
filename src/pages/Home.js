@@ -101,16 +101,36 @@ const Home = () => {
         <div className='social-wrapper'>
           <p className='connect-text'>Let's connect</p>
           <div className='social'>
-            <a href='https://github.com/FesoQue' className='fb'>
+            <a
+              href='https://m.facebook.com/adefesoqudus.dmics'
+              className='fb'
+              target='_blank'
+              rel='noreferrer'
+            >
               <GrFacebookOption />
             </a>
-            <a href='https://twitter.com/pengpixel' className='twitter'>
+            <a
+              href='https://twitter.com/pengpixel'
+              className='twitter'
+              target='_blank'
+              rel='noreferrer'
+            >
               <AiOutlineTwitter />
             </a>
-            <a href='https://github.com/FesoQue' className='github'>
+            <a
+              href='https://github.com/FesoQue'
+              className='github'
+              target='_blank'
+              rel='noreferrer'
+            >
               <AiFillGithub />
             </a>
-            <a href='' className='linkedin'>
+            <a
+              href='https://www.linkedin.com/in/adefeso-qudus-a-ba8ba310a'
+              className='linkedin'
+              target='_blank'
+              rel='noreferrer'
+            >
               <AiFillLinkedin />
             </a>
           </div>
