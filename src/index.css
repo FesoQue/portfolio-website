@@ -554,21 +554,22 @@ h1.char {
 .degree-wrapper::after {
   content: '';
   position: absolute;
-  inset: 6px;
+  inset: 2px;
   background: var(--gray8);
   border-radius: 50%;
 }
-.degree-wrapper:hover::before {
+/* .degree-wrapper:hover::before {
   inset: -5px 0px;
 }
-/* @keyframes orbit {
+*/
+@keyframes orbit {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+}
 @keyframes animate {
   0% {
     transform: rotate(0deg);

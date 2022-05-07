@@ -109,7 +109,7 @@ const Skills = () => {
 
       degArr.forEach((element, i) => {
         element.style.left = '132px';
-        element.style.transformOrigin = '50% 185px';
+        element.style.transformOrigin = '50% 145px';
       });
     }
 
