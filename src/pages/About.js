@@ -101,14 +101,15 @@ const About = () => {
                 Hi, my name is{' '}
                 <span
                   style={{
-                    textTransform: 'uppercase',
-                    fontWeight: '500',
-                    fontStyle: 'italic',
+                    fontWeight: '600',
+                    padding: '4px',
+                    borderRadius: '3px',
+                    backgroundColor: '#2a2e35',
                   }}
                 >
-                  Adefeso Qudus
+                  Adefeso Qudus (Q.Dus)
                 </span>
-                , I studied Electrical Electronics Engineering.
+                , I studied Electrical/Electronics Engineering.
               </p>
             </div>
             <div
@@ -119,9 +120,10 @@ const About = () => {
               <p>
                 <span
                   style={{
-                    textTransform: 'uppercase',
-                    fontWeight: '500',
-                    fontStyle: 'italic',
+                    fontWeight: '600',
+                    padding: '4px',
+                    borderRadius: '3px',
+                    backgroundColor: '#2a2e35',
                   }}
                 >
                   Adefeso Qudus (Q.Dus)
@@ -138,16 +140,18 @@ const About = () => {
               <p>
                 <span
                   style={{
-                    textTransform: 'uppercase',
-                    fontWeight: '500',
-                    fontStyle: 'italic',
+                    fontWeight: '600',
+                    padding: '4px',
+                    borderRadius: '3px',
+                    backgroundColor: '#2a2e35',
                   }}
                 >
                   Adefeso Qudus (Q.Dus)
                 </span>{' '}
-                is an Electrical Engineer now turned to frontend developer. He
-                remembered the first time he discovered HTML, CSS, Wordpress a
-                whole new world of possibilities happened before his eyes.
+                is an Electrical/Electronics Engineer now turned to frontend
+                developer. He remembered the first time he discovered HTML, CSS,
+                Wordpress a whole new world of possibilities happened before his
+                eyes.
               </p>
             </div>
             <div
@@ -158,9 +162,10 @@ const About = () => {
               <p>
                 <span
                   style={{
-                    textTransform: 'uppercase',
-                    fontWeight: '500',
-                    fontStyle: 'italic',
+                    fontWeight: '600',
+                    padding: '4px',
+                    borderRadius: '3px',
+                    backgroundColor: '#2a2e35',
                   }}
                 >
                   Adefeso Qudus (Q.Dus)
@@ -182,9 +187,10 @@ const About = () => {
               <p>
                 <span
                   style={{
-                    textTransform: 'uppercase',
-                    fontWeight: '500',
-                    fontStyle: 'italic',
+                    fontWeight: '600',
+                    padding: '4px',
+                    borderRadius: '3px',
+                    backgroundColor: '#2a2e35',
                   }}
                 >
                   Adefeso Qudus (Q.Dus)
@@ -194,17 +200,24 @@ const About = () => {
                 whole new world of possibilities happened before his eyes. He
                 fiddled with wordpress(because he finds it easier then) for days
                 to see what he could do with it. In the process, his{' '}
-                <a href=''>first ever website</a> was created. It was an
-                entertainment blog website. He was excited and really wants to
-                create more magical things with it . Even though he became
-                really passionate and want to create more interesting things on
-                the web to satisfy his need for creativity, he just couldn't due
-                to academics workload. He reginited the flames and passion for
-                web development after he graduated.
+                <a
+                  href='https://kudosnaija.wordpress.com'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  first ever website
+                </a>{' '}
+                was created. It was an entertainment blog website. He was
+                excited and really wants to create more magical things with it .
+                Even though he became really passionate and want to create more
+                interesting things on the web to satisfy his need for
+                creativity, he just couldn't due to academics workload. He
+                reginited the flames and passion for web development after he
+                graduated.
               </p>
               <p>
                 As a person, he's an ambitious, goal driven & detail oriented
-                frontend developer looking to leverage my working knowledge of
+                frontend developer looking to leverage his working knowledge of
                 frontend technologies for a role in an established IT company.
               </p>
             </div>
@@ -216,9 +229,10 @@ const About = () => {
               <p>
                 <span
                   style={{
-                    textTransform: 'uppercase',
-                    fontWeight: '500',
-                    fontStyle: 'italic',
+                    fontWeight: '600',
+                    padding: '4px',
+                    borderRadius: '3px',
+                    backgroundColor: '#2a2e35',
                   }}
                 >
                   Adefeso Qudus (Q.Dus)
@@ -241,12 +255,14 @@ const About = () => {
               </p>
               <p>
                 As a person, he's an ambitious, goal driven & detail oriented
-                frontend developer looking to leverage my working knowledge of
+                frontend developer looking to leverage his working knowledge of
                 frontend technologies for a role in an established IT company
                 with the opportunity to work on challenging and diverse projects
-                and equally trying to help maximize productivity. He's also
-                naturally curious, confident and always eager to broaden his
-                horizon by learning new technology one at a time.
+                and equally trying to help maximize productivity.
+              </p>
+              <p>
+                He's also naturally curious, confident and always eager to
+                broaden his horizon by learning different new technologies.
               </p>
             </div>
           </div>

@@ -84,8 +84,8 @@ const Skills = () => {
     const degArr = Array.from(degreeElement);
 
     degArr.forEach((element, index) => {
-      element.style.left = '130px';
-      element.style.transformOrigin = '50% 145px';
+      // element.style.left = '140px';
+      // element.style.transformOrigin = '50% 145px';
       element.style.transform = `rotate(${index * 40}deg)`;
     });
   }, []);
@@ -108,8 +108,8 @@ const Skills = () => {
       mainCircle.current.style.height = `300px`;
 
       degArr.forEach((element, i) => {
-        element.style.left = '125px';
-        element.style.transformOrigin = '50% 145px';
+        element.style.left = '132px';
+        element.style.transformOrigin = '50% 185px';
       });
     }
 
