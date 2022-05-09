@@ -84,7 +84,7 @@ const Home = () => {
           <p>
             Have you wondered who is responsible for the design of the websites
             you use everyday? Yes, that's what <span>web developer</span> does.
-            I help create fast, elegant, scalable and reliable websites with;
+            I help build stable, elegant, secure and reliable websites with;
           </p>
         </div>
         {/* services */}
