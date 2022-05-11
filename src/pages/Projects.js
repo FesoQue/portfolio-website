@@ -188,7 +188,7 @@ const Projects = () => {
                     <AiFillGithub />
                   </a>
                   <a
-                    href='https://.netlify.app'
+                    href='https://eazibank.netlify.app'
                     className='ext-link'
                     target='_blank'
                     rel='noreferrer'
