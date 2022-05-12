@@ -6,7 +6,7 @@ import { RiCodeSSlashFill } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiDownload } from 'react-icons/fi';
 import { Link, NavLink } from 'react-router-dom';
-import RESUME from '../assets/Adefeso_qudus_dev_resume.pdf';
+import RESUME from '../assets/tech-resume.pdf';
 
 const MobileNav = () => {
   /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */

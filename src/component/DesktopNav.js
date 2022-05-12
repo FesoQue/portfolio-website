@@ -6,7 +6,7 @@ import { RiCodeSSlashFill } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiDownload } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
-import RESUME from '../assets/Adefeso_qudus_dev_resume.pdf';
+import RESUME from '../assets/tech-resume.pdf';
 
 const DesktopNav = () => {
   const [isClicked, setIsClicked] = useState(false);
