@@ -114,7 +114,7 @@ const Projects = () => {
             </div>
             <div className='p-card p-card-4'>
               <div className='p-card-content'>
-                <h4>Sneakers Landing Page</h4>
+                <h4>Sneakers paystack checkout</h4>
                 <div className='lang-tags'>
                   <button className='lang-tag react-tag'>react</button>
                   <button className='lang-tag context-tag'>context</button>
