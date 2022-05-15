@@ -83,7 +83,7 @@ const Home = () => {
         <div className='job-desc'>
           <p>
             Have you wondered who is responsible for the design of the websites
-            you use everyday? Yes, that's what <span>web developer</span> does.
+            you use everyday? Yes, that's what a <span>web developer</span> does.
             I help build stable, elegant, secure and reliable websites with;
           </p>
         </div>

@@ -29,13 +29,16 @@ const Contact = () => {
 
     if (!name) {
       setIsSubmit(true);
-    } else if (!email && !validateEmail(email)) {
+    }
+    if (!email && !validateEmail(email)) {
       setIsSubmit(true);
-    } else if (!message) {
+    }
+    if (!message) {
       setIsSubmit(true);
-    } else {
+    }
+    if (name && email && validateEmail(email) && message) {
       emailjs.sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        'service_d76zupb',
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         form.current,
         process.env.REACT_APP_EMAILJS_KEY
