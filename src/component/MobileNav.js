@@ -15,6 +15,8 @@ const MobileNav = () => {
 
   const checkScroll = () => {
     const currentScrollPos = window.pageYOffset;
+    /*
+     setVisible(currentScrollPos > prevScrollPos);*/
     setVisible(prevScrollPos > currentScrollPos);
     setPrevScrollPos(currentScrollPos);
   };
@@ -30,11 +32,16 @@ const MobileNav = () => {
     <div className='mobile-header'>
       <nav className='header-row-1'>
         <div className='row-1-wrapper container'>
-          <div className='logo'>
-            <Link to='/'>
+          <div className={`${visible ? 'logo' : 'logo dev'}`}>
+            <Link to='/' className='home-link1'>
               <h2>
                 Q<span>.</span>
               </h2>
+            </Link>
+            <Link to='/' className='home-link2'>
+              <p>
+                That Dev <br /> Guy
+              </p>
             </Link>
           </div>
 

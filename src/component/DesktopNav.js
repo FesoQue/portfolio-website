@@ -5,7 +5,7 @@ import { VscTools } from 'react-icons/vsc';
 import { RiCodeSSlashFill } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiDownload } from 'react-icons/fi';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import RESUME from '../assets/tech-resume.pdf';
 
 const DesktopNav = () => {
@@ -38,7 +38,9 @@ const DesktopNav = () => {
         {/* row1 */}
         <div className='dsk-nav-row dsk-nav-row1 logo'>
           <h2>
-            Q<span>.</span>
+            <Link to='/'>
+              Q<span>.</span>
+            </Link>
           </h2>
         </div>
         {/* row2 */}
