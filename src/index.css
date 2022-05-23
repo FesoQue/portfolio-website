@@ -196,9 +196,9 @@ main {
   transform: translateY(0);
 }
 .home-link2 p {
-text-transform: uppercase;
+  text-transform: uppercase;
   font-size: 14px;
-  height: 100%;
+  font-weight: 600;
 }
 
 .download-resume {
@@ -274,12 +274,14 @@ text-transform: uppercase;
        HOMEPAGE
    ===================  */
 .homepage {
+  position: relative;
   height: 85vh;
   margin-top: 15vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 .intro-text {
   margin-bottom: 1rem;
@@ -415,7 +417,7 @@ h1.char {
   transition-delay: 0.3s;
 }
 .social .linkedin {
-  transition-delay: 0.5s;
+  transition-delay: 0.4s;
 }
 .social-wrapper:hover .connect-text {
   transform: translateX(-250px);
@@ -431,6 +433,40 @@ h1.char {
 }
 .social-wrapper:hover .linkedin {
   transition-delay: 0.2s;
+}
+.theme-btn {
+  position: absolute;
+  bottom: 120px;
+  right: 10px;
+  width: 20px;
+    height: 20px;
+  } 
+  .theme-btn1 {
+    background: var(--theme-bg-variant);
+  }
+  .theme-btn2 {
+    background: #fff;
+    bottom: 50px;
+}
+.theme-btn1::before, .theme-btn1::after, .theme-btn2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 1px;
+  height: 50px;
+  margin: 0 auto;
+  background: var(--gray6);
+}
+.theme-btn1::before {
+  top: -50px;
+}
+.theme-btn1::after {
+  bottom: -50px;
+}
+.theme-btn2::after {
+  bottom: -50px;
 }
 
 /* ===================
@@ -1197,6 +1233,9 @@ textarea {
     color: #4ee44e;
     font-weight: 700;
     display: none;
+  }
+  .theme-btn {
+    right: 80px;
   }
   /* about */
   .section {

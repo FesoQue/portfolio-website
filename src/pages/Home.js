@@ -83,8 +83,9 @@ const Home = () => {
         <div className='job-desc'>
           <p>
             Have you wondered who is responsible for the design of the websites
-            you use everyday? Yes, that's what a <span>web developer</span> does.
-            I help build stable, elegant, secure and reliable websites with;
+            you use everyday? Yes, that's what a <span>web developer</span>{' '}
+            does. I help build stable, elegant, secure and reliable websites
+            with;
           </p>
         </div>
         {/* services */}
@@ -134,6 +135,18 @@ const Home = () => {
               <AiFillLinkedin />
             </a>
           </div>
+        </div>
+        {/* themes */}
+        {/* <div className='themes-wrapper'>
+          <div className='themes'>
+            <button className='theme-btn theme-btn1'></button>
+            <button className='theme-btn theme-btn2'></button>
+            <button className='theme-btn theme-btn3'></button>
+          </div>
+        </div> */}
+        <div className='themes'>
+          <button className='theme-btn theme-btn1'></button>
+          <button className='theme-btn theme-btn2'></button>
         </div>
       </div>
     </motion.section>
