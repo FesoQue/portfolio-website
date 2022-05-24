@@ -124,7 +124,7 @@ main {
   overflow-x: hidden;
 }
 /* header */
-/* .mobile-header {
+.mobile-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -269,7 +269,7 @@ main {
 }
 .five {
   background-color: #da182f;
-} */
+}
 
 /* ===================
        HOMEPAGE
