@@ -40,15 +40,8 @@
       sizes="512x512"
       href="./favicon/android-chrome-512x512.png"
     />
-
     <link rel="manifest" href="./favicon/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./hamburgers.css" />
+
     <!-- Primary Meta Tags -->
     <title>qdus — frontend developer</title>
     <meta name="title" content="qdus — frontend developer" />
@@ -56,7 +49,6 @@
       name="description"
       content="I am a frontend developer looking to leverage my working knowledge of frontend technologies to help individuals and growing companies like yours create fast, elegant, functional and usable websites/frontend application that combine your goals with your user's need."
     />
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://qdus.netlify.app/" />
@@ -69,7 +61,6 @@
       property="og:image"
       content="https://raw.githubusercontent.com/FesoQue/portfolio-website/main/src/assets/portfolio-ss-img.png"
     />
-
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://qdus.netlify.app/" />
@@ -82,9 +73,25 @@
       property="twitter:image"
       content="https://raw.githubusercontent.com/FesoQue/portfolio-website/main/src/assets/portfolio-ss-img.png"
     />
+    <!-- defer google font -->
+    <!-- this would work too -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap"
+      rel="preload"
+      as="'style"
+    /> -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap""></noscript
+    >
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
