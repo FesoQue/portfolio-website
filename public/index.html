@@ -73,6 +73,14 @@
       property="twitter:image"
       content="https://raw.githubusercontent.com/FesoQue/portfolio-website/main/src/assets/portfolio-ss-img.png"
     />
+    <link
+      rel="preload"
+      as="style"
+      href="style.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+
     <!-- defer google font -->
     <!-- this would work too -->
     <!-- <link
@@ -87,9 +95,10 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript
-      ><link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap""></noscript
-    >
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap"
+    /></noscript>
   </head>
   <body>
     <div id="root"></div>
