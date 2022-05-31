@@ -842,34 +842,34 @@ h1.char {
   cursor: pointer;
 }
 .p-card-1 {
-  background-image: url('./assets/wishopa.jpg');
+  background-image: url('./assets/dashboard.jpg');
 }
 .p-card-2 {
-  background-image: url('./assets/coloree.jpg');
+  background-image: url('./assets/wishopa.jpg');
 }
 .p-card-3 {
-  background-image: url('./assets/coinverse.jpg');
+  background-image: url('./assets/coloree.jpg');
 }
 .p-card-4 {
-  background-image: url('./assets/sneakers.jpg');
+  background-image: url('./assets/coinverse.jpg');
 }
 .p-card-5 {
-  background-image: url('./assets/bookmark.jpg');
+  background-image: url('./assets/sneakers.jpg');
 }
 .p-card-6 {
-  background-image: url('./assets/easybank.jpg');
+  background-image: url('./assets/bookmark.jpg');
 }
 .p-card-7 {
-  background-image: url('./assets/pricing.jpg');
+  background-image: url('./assets/easybank.jpg');
 }
 .p-card-8 {
-  background-image: url('./assets/devpadi.jpg');
+  background-image: url('./assets/pricing.jpg');
 }
 .p-card-9 {
-  background-image: url('./assets/room.jpg');
+  background-image: url('./assets/devpadi.jpg');
 }
 .p-card-10 {
-  background-image: url('./assets/socialdb.jpg');
+  background-image: url('./assets/room.jpg');
 }
 .p-card::after {
   content: '';
@@ -941,6 +941,7 @@ h1.char {
 }
 .mui-tag {
   background-color: #0078f1;
+  color: var(--text-color);
 }
 .chartjs-tag {
   background-color: #ff6384;
@@ -961,6 +962,9 @@ h1.char {
 }
 .github:hover {
   color: var(--green-light);
+}
+.ext-link {
+  font-size: 10rem;
 }
 .ext-link:hover {
   color: var(--cyan);
@@ -1027,9 +1031,7 @@ textarea {
   border-radius: var(--radius);
 }
 .contact-info span > svg {
-  width: 18px;
-  fill: var(--gray8);
-
+  width: 25px;
 }
 .contact-info div:last-child {
   margin-bottom: 0;
@@ -1303,9 +1305,10 @@ textarea {
   }
   .dsk-download-resume {
     position: relative;
+    color: var(--green-light);
   }
   .dsk-download-resume svg {
-    width: 22px;
+    width: 32px;
   }
   .tooltip {
     position: absolute;
