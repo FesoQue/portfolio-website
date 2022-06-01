@@ -920,33 +920,34 @@ h1.char {
   border-radius: 4px;
   font-weight: 600;
 }
-.html-tag {
+.html {
   background-color: #e42750;
   color: var(--text-color);
 }
-.css-tag {
+.css {
   background-color: #0078f1;
   color: var(--text-color);
 }
-.bootstrap-tag {
-  background-color: #b182f7;
+.bootstrap, .syncfusion {
+  background-color: #944ffb;
   color: var(--text-color);
 }
-.react-tag {
+.react {
   background-color: var(--cyan);
 }
-.firebase-tag,
-.js-tag {
+.firebase,
+.javascript {
   background-color: yellow;
 }
-.mui-tag {
+.mui {
   background-color: #0078f1;
   color: var(--text-color);
 }
-.chartjs-tag {
-  background-color: #ff6384;
+.chartjs, .redux {
+  background-color: #d60936;
+  color: var(--text-color);
 }
-.context-tag {
+.context{
   background-color: var(--gray3);
 }
 .project-links {
@@ -959,15 +960,6 @@ h1.char {
 }
 .project-links .github {
   margin-right: 1rem;
-}
-.github:hover {
-  color: var(--green-light);
-}
-.ext-link {
-  font-size: 10rem;
-}
-.ext-link:hover {
-  color: var(--cyan);
 }
 
 /* ===================

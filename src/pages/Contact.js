@@ -140,7 +140,7 @@ const Contact = () => {
             <div className='social-info'>
               <div className=''>
                 <a
-                  href='https://m.facebook.com/adefesoqudus.dmics'
+                  href='https://m.facebook.com/'
                   target='_blank'
                   rel='noreferrer'
                 >

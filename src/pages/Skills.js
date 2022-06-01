@@ -136,7 +136,7 @@ const Skills = () => {
           <button
             onClick={() => setActiveClass('skills')}
             className={`tab-btn ${
-              option === 'skills' ? 'active-tab-btn' : 'null'
+              option === 'skills' ? 'active-tab-btn' : null
             }`}
           >
             Skills
@@ -144,7 +144,7 @@ const Skills = () => {
           <button
             onClick={() => setActiveClass('services')}
             className={`tab-btn ${
-              option === 'services' ? 'active-tab-btn' : 'null'
+              option === 'services' ? 'active-tab-btn' : null
             }`}
           >
             Services

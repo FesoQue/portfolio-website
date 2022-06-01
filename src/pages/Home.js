@@ -10,9 +10,6 @@ const Home = () => {
   // gsap
   const tl = useRef();
   const charEl = useRef();
-  const q = gsap.utils.selector(charEl);
-  gsap.set(q('div'), { yPercent: -170 });
-  gsap.set(charEl.current, { autoAlpha: 1 });
 
   useEffect(() => {
     // slide up multitext effect
@@ -37,6 +34,10 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    const q = gsap.utils.selector(charEl);
+    gsap.set(q('div'), { yPercent: -170 });
+    gsap.set(charEl.current, { autoAlpha: 1 });
+
     tl.current = gsap
       .timeline()
       .to(q('div'), {
@@ -100,7 +101,7 @@ const Home = () => {
           <p className='connect-text'>Let's connect</p>
           <div className='social'>
             <a
-              href='https://m.facebook.com/adefesoqudus.dmics'
+              href='https://m.facebook.com/'
               className='fb'
               target='_blank'
               rel='noreferrer'

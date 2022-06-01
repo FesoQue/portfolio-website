@@ -138,18 +138,18 @@ export const ExternalLink = () => {
       <path
         fill='none'
         stroke='#06dfdf'
-        stroke-linejoin='round'
-        stroke-miterlimit='10'
-        stroke-width='2'
+        strokeLinejoin='round'
+        strokeMiterlimit='10'
+        strokeWidth='2'
         d='M22,14v10c0,0.552-0.448,1-1,1H6c-0.552,0-1-0.448-1-1V9c0-0.552,0.448-1,1-1h10'
       />
       <path
         fill='none'
         stroke='#06dfdf'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-miterlimit='10'
-        stroke-width='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeMiterlimit='10'
+        strokeWidth='2'
         d='M26 10L26 4 20 4M26 4L14 16'
       />
       <path d='M23 16L21 16 21 13.421 23 11.421zM14 7L14 9 16.579 9 18.579 7z' />
