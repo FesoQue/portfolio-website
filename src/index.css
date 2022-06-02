@@ -1074,26 +1074,6 @@ textarea {
   font-size: 0.8rem;
   font-weight: 700;
 }
-/* PRELOADER */
-/* .preloader {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('./assets/preloader.gif');
-  background-color: var(--gray8);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 40%;
-  z-index: 9999;
-}
-.preloader.hide {
-  visibility: hidden;
-  z-index: -999;
-} */
 @media screen and (min-width: 630px) {
   .intro-text h1 {
     font-size: 3rem;
